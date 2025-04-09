@@ -154,7 +154,7 @@ struct ResultView: View {
                             }
                             
                             if bishopScore.previousDeliveries > 0 {
-                                modifierRow(title: "Partos previos (\(bishopScore.previousDeliveries))", points: bishopScore.previousDeliveries)
+                            modifierRow(title: "Previous births (\(bishopScore.previousDeliveries))", points: bishopScore.previousDeliveries)
                             }
                             
                             if bishopScore.postdatePregnancy {
@@ -368,9 +368,9 @@ struct ResultView: View {
     
     // Calculate progress for parameter bar
     private func getParameterProgress(points: Int) -> CGFloat {
-        let maxPoints = 3 // Máxima puntuación para un parámetro en Bishop Score
+        let maxPoints = 3 // Maximum score for a Bishop Score parameter
         let percentage = CGFloat(points) / CGFloat(maxPoints)
-        return max(16, percentage * 100) // Mínimo 16 puntos para que sea visible
+        return max(16, percentage * 100) // Minimum width of 16 to ensure visibility
     }
     
     // Modifier row
@@ -426,29 +426,29 @@ struct ResultView: View {
         switch interpretation {
         case .favorable:
             return [
-                "No se requiere maduración cervical previa",
-                "Inducción con oxitocina",
-                "Considerar amniotomía"
+                "No cervical ripening required",
+                "Induction with oxytocin",
+                "Consider amniotomy"
             ]
         case .moderatelyFavorable:
             if bishopScore.nulliparous && useModifiers {
                 return [
-                    "En nulíparas, considerar maduración cervical",
-                    "Evaluar necesidad de prostaglandinas",
-                    "Monitorización continua durante inducción"
+                    "In nulliparous patients, consider cervical ripening",
+                    "Evaluate need for prostaglandins",
+                    "Continuous monitoring during induction"
                 ]
             } else {
                 return [
-                    "En multíparas, iniciar inducción con oxitocina",
-                    "Considerar amniotomía si es posible",
-                    "Monitorización continua durante inducción"
+                    "In multiparous patients, start induction with oxytocin",
+                    "Consider amniotomy if possible",
+                    "Continuous monitoring during induction"
                 ]
             }
         case .unfavorable:
             return [
-                "Maduración cervical farmacológica con prostaglandinas",
-                "Considerar métodos mecánicos (balón)",
-                "Reevaluar después de maduración cervical"
+                "Pharmacological cervical ripening with prostaglandins",
+                "Consider mechanical methods (balloon)",
+                "Reevaluate after cervical ripening"
             ]
         }
     }

@@ -313,8 +313,8 @@ struct InformationView: View {
 
 // Card for information
 struct InfoCard: View {
-    let title: String
-    let content: String
+    let title: LocalizedStringKey
+    let content: LocalizedStringKey
     let icon: String
     let color: Color
     
@@ -331,7 +331,7 @@ struct InfoCard: View {
                     .foregroundColor(color)
             }
             
-            Text(.init(content))
+            Text(content)
                 .font(.system(size: 15, design: .rounded))
                 .fixedSize(horizontal: false, vertical: true)
         }

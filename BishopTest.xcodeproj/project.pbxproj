@@ -10,9 +10,22 @@
 		B9A5EF942D9DA6AA0081B72C /* BishopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BishopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B9F355DD2DA6147600492F9C /* Exceptions for "BishopTest" folder in "BishopTest" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B9A5EF932D9DA6AA0081B72C /* BishopTest */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B9A5EF962D9DA6AA0081B72C /* BishopTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B9F355DD2DA6147600492F9C /* Exceptions for "BishopTest" folder in "BishopTest" target */,
+			);
 			path = BishopTest;
 			sourceTree = "<group>";
 		};
@@ -302,6 +315,8 @@
 				DEVELOPMENT_TEAM = WQCQ3T6U7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BishopTest/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +347,8 @@
 				DEVELOPMENT_TEAM = WQCQ3T6U7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BishopTest/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
