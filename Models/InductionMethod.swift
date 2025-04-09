@@ -9,7 +9,7 @@ struct InductionMethod: Identifiable {
     var contraindications: [String]
     var risks: [String]
     
-    // Método para recomendar opciones dependiendo del score
+    // Method to recommend options depending on the score
     static func recommendedMethods(for score: BishopScore) -> [InductionMethod] {
         if score.totalScore >= 8 {
             return InductionMethod.oxytocin
@@ -28,87 +28,87 @@ struct InductionMethod: Identifiable {
         }
     }
     
-    // Métodos de inducción predefinidos
+    // Predefined induction methods
     static let oxytocin = [
         InductionMethod(
-            name: "Oxitocina",
-            description: "Hormona sintética que estimula las contracciones uterinas.",
+            name: "Oxytocin",
+            description: "Synthetic hormone that stimulates uterine contractions.",
             indications: [
                 "Bishop Score ≥ 6",
-                "Cérvix favorable"
+                "Favorable cervix"
             ],
             contraindications: [
                 "Placenta previa",
                 "Vasa previa",
-                "Prolapso de cordón"
+                "Cord prolapse"
             ],
             risks: [
-                "Hiperestimulación uterina",
-                "Alteraciones de FCF",
-                "Rotura uterina (raro)"
+                "Uterine hyperstimulation",
+                "FHR abnormalities",
+                "Uterine rupture (rare)"
             ]
         )
     ]
     
     static let prostaglandins = [
         InductionMethod(
-            name: "Dinoprostona",
-            description: "Prostaglandina E2 que favorece la maduración cervical.",
+            name: "Dinoprostone",
+            description: "Prostaglandin E2 that promotes cervical ripening.",
             indications: [
                 "Bishop Score < 6",
-                "Cérvix desfavorable"
+                "Unfavorable cervix"
             ],
             contraindications: [
-                "Cesárea anterior",
-                "Multiparidad (≥6 partos)",
-                "Hipersensibilidad a prostaglandinas"
+                "Previous cesarean section",
+                "Grand multiparity (≥6 births)",
+                "Hypersensitivity to prostaglandins"
             ],
             risks: [
-                "Taquisistolia",
-                "Hiperestimulación uterina",
-                "Rotura uterina (raro)"
+                "Tachysystole",
+                "Uterine hyperstimulation",
+                "Uterine rupture (rare)"
             ]
         ),
         InductionMethod(
             name: "Misoprostol",
-            description: "Prostaglandina E1 que favorece la maduración cervical.",
+            description: "Prostaglandin E1 that promotes cervical ripening.",
             indications: [
                 "Bishop Score < 6",
-                "Cérvix desfavorable",
-                "Bajo riesgo de hiperestimulación"
+                "Unfavorable cervix",
+                "Low risk of hyperstimulation"
             ],
             contraindications: [
-                "Cesárea anterior",
-                "Cirugía uterina previa",
-                "Hipersensibilidad a prostaglandinas"
+                "Previous cesarean section",
+                "Previous uterine surgery",
+                "Hypersensitivity to prostaglandins"
             ],
             risks: [
-                "Taquisistolia",
-                "Hiperestimulación uterina",
-                "Rotura uterina"
+                "Tachysystole",
+                "Uterine hyperstimulation",
+                "Uterine rupture"
             ]
         )
     ]
     
     static let mechanical = [
         InductionMethod(
-            name: "Balón cervical doble",
-            description: "Dispositivo mecánico de doble balón que favorece la dilatación cervical.",
+            name: "Double balloon catheter",
+            description: "Mechanical double balloon device that promotes cervical dilation.",
             indications: [
                 "Bishop Score < 6",
-                "Cérvix desfavorable",
-                "Cesárea anterior",
-                "Alto riesgo de hiperestimulación"
+                "Unfavorable cervix",
+                "Previous cesarean section",
+                "High risk of hyperstimulation"
             ],
             contraindications: [
-                "RPM (Rotura Prematura de Membranas)",
-                "Placenta marginal",
-                "Infecciones maternas activas"
+                "PROM (Premature Rupture of Membranes)",
+                "Marginal placenta",
+                "Active maternal infections"
             ],
             risks: [
-                "Disconfort durante colocación",
-                "Sangrado leve",
-                "Menor riesgo de hiperestimulación uterina"
+                "Discomfort during placement",
+                "Mild bleeding",
+                "Lower risk of uterine hyperstimulation"
             ]
         )
     ]

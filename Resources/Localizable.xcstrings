@@ -1,936 +1,288 @@
 {
-  "sourceLanguage" : "es",
+  "sourceLanguage" : "en",
   "strings" : {
     "" : {
 
     },
-    "¿Estás seguro de que deseas eliminar esta evaluación?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Are you sure you want to delete this evaluation?"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Estás seguro de que deseas eliminar esta evaluación?"
-          }
-        }
-      }
-    },
-    "¿Estás seguro de que deseas restablecer todos los ajustes a sus valores predeterminados?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Are you sure you want to reset all settings to their default values?"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Estás seguro de que deseas restablecer todos los ajustes a sus valores predeterminados?"
-          }
-        }
-      }
-    },
     "%lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        }
-      }
-    },
-    "%lld años" : {
 
     },
-    "© 2025 BishopTest App" : {
+    "%lld years • %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "© 2025 BishopTest App"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "© 2025 BishopTest App"
+            "state" : "new",
+            "value" : "%1$lld years • %2$@"
           }
         }
       }
     },
-    "1.0.0" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.0.0"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.0.0"
-          }
-        }
-      }
-    },
-    "Acerca de" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "About"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Acerca de"
-          }
-        }
-      }
-    },
-    "Ajustes" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustes"
-          }
-        }
-      }
-    },
-    "Altura (Plano)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Station (Level)"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Altura (Plano)"
-          }
-        }
-      }
-    },
-    "Bienvenido a BishopTest" : {
+    "•" : {
 
     },
-    "Borramiento" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Effacement"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borramiento"
-          }
-        }
-      }
-    },
-    "Buscar especialidad" : {
+    "+%lld" : {
 
     },
-    "Buscar método" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search method"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buscar método"
-          }
-        }
-      }
-    },
-    "Calcular Puntuación" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calculate Score"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calcular Puntuación"
-          }
-        }
-      }
-    },
-    "Cancelar" : {
+    "0 points" : {
 
     },
-    "Cerrar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Close"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar"
-          }
-        }
-      }
-    },
-    "Comenzar" : {
+    "1 point" : {
 
     },
-    "Consistencia" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Consistency"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Consistencia"
-          }
-        }
-      }
-    },
-    "Dilatación" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dilation"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dilatación"
-          }
-        }
-      }
-    },
-    "Edad:" : {
+    "2 points" : {
 
     },
-    "Edad: %lld años" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Age: %lld years"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edad: %lld años"
-          }
-        }
-      }
-    },
-    "Editar información personal" : {
+    "3 points" : {
 
     },
-    "Eliminar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eliminar"
-          }
-        }
-      }
-    },
-    "Eliminar evaluación" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete evaluation"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eliminar evaluación"
-          }
-        }
-      }
-    },
-    "Embarazo postérmino" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Post-term pregnancy"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Embarazo postérmino"
-          }
-        }
-      }
-    },
-    "Especialidad" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Specialty"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Especialidad"
-          }
-        }
-      }
-    },
-    "Evaluación" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Evaluation"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Evaluación"
-          }
-        }
-      }
-    },
-    "Fuente: Test de Bishop" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Source: Bishop Test"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fuente: Test de Bishop"
-          }
-        }
-      }
-    },
-    "Guardado" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Saved"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guardado"
-          }
-        }
-      }
-    },
-    "Guardar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Save"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guardar"
-          }
-        }
-      }
-    },
-    "Guardar cambios" : {
+    "14" : {
 
     },
-    "Historial" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "History"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historial"
-          }
-        }
-      }
+    "60" : {
+
     },
-    "Información" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Information"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Información"
-          }
-        }
-      }
+    "About" : {
+
     },
-    "Información del paciente" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patient information"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Información del paciente"
-          }
-        }
-      }
+    "Additional information" : {
+
     },
-    "Información del profesional" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Professional information"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Información del profesional"
-          }
-        }
-      }
+    "Age" : {
+
     },
-    "Información Médica" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Medical information"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Información Médica"
-          }
-        }
-      }
+    "App Preferences" : {
+
     },
-    "Iniciar Evaluación" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start Evaluation"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iniciar Evaluación"
-          }
-        }
-      }
+    "Applied Modifiers" : {
+
     },
-    "Inicio" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Home"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inicio"
-          }
-        }
-      }
+    "Are you sure you want to delete this evaluation?" : {
+
     },
-    "La evaluación ha sido guardada correctamente." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The evaluation has been saved successfully."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La evaluación ha sido guardada correctamente."
-          }
-        }
-      }
+    "Are you sure you want to reset all settings to their default values?" : {
+
     },
-    "Métodos" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Methods"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Métodos"
-          }
-        }
-      }
+    "Bishop Score on Wikipedia" : {
+
     },
-    "Métodos de Inducción" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Induction Methods"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Métodos de Inducción"
-          }
-        }
-      }
+    "Bishop Score Test" : {
+
     },
-    "Métodos de inducción recomendados:" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recommended induction methods:"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Métodos de inducción recomendados:"
-          }
-        }
-      }
+    "BishopTest" : {
+
     },
-    "Modificadores" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modifiers"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modificadores"
-          }
-        }
-      }
+    "Cancel" : {
+
     },
-    "Modo oscuro" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dark mode"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modo oscuro"
-          }
-        }
-      }
+    "Clinical note" : {
+
     },
-    "No hay evaluaciones guardadas" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No saved evaluations"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No hay evaluaciones guardadas"
-          }
-        }
-      }
+    "Clinical Note" : {
+
     },
-    "Nombre" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Name"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre"
-          }
-        }
-      }
+    "Close" : {
+
     },
-    "Nombre (opcional)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Name (optional)"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre (opcional)"
-          }
-        }
-      }
+    "Complete all fields to calculate the score" : {
+
+    },
+    "Customize your experience" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete Evaluation" : {
+
+    },
+    "Description" : {
+
+    },
+    "Edit Information" : {
+
+    },
+    "Effectiveness" : {
+
+    },
+    "Evaluated Parameters" : {
+
+    },
+    "Evaluation" : {
+
+    },
+    "Favorable" : {
+
+    },
+    "Hello, %@" : {
+
+    },
+    "Help us tailor the app to your professional profile" : {
+
+    },
+    "History" : {
+
+    },
+    "Induction Methods" : {
+
+    },
+    "Information" : {
+
+    },
+    "Interpretation" : {
+
+    },
+    "Interpretation of Results" : {
+
+    },
+    "Medical Specialty" : {
+
+    },
+    "Moderate" : {
+
+    },
+    "Modifiers" : {
+
+    },
+    "More information" : {
+
+    },
+    "Name" : {
+
+    },
+    "Name (optional)" : {
+
+    },
+    "New Evaluation" : {
+
+    },
+    "No evaluations found" : {
+
+    },
+    "No methods found" : {
+
+    },
+    "No saved evaluations" : {
+
     },
     "OK" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        }
-      }
-    },
-    "Partos previos: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Previous births: %lld"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partos previos: %lld"
-          }
-        }
-      }
-    },
-    "Por favor, dinos quién eres para personalizar tu experiencia" : {
 
     },
-    "Posición" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Position"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Posición"
-          }
-        }
-      }
-    },
-    "Preeclampsia" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preeclampsia"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preeclampsia"
-          }
-        }
-      }
-    },
-    "Preferencias de la aplicación" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App preferences"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preferencias de la aplicación"
-          }
-        }
-      }
-    },
-    "Puntuación total" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total score"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Puntuación total"
-          }
-        }
-      }
-    },
-    "Recomendaciones:" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recommendations:"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recomendaciones:"
-          }
-        }
-      }
-    },
-    "Restablecer" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reset"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restablecer"
-          }
-        }
-      }
-    },
-    "Restablecer valores" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reset values"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restablecer valores"
-          }
-        }
-      }
-    },
-    "Restablecer valores predeterminados" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reset to default values"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restablecer valores predeterminados"
-          }
-        }
-      }
-    },
-    "Resultado" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Result"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resultado"
-          }
-        }
-      }
-    },
-    "Ruptura prematura de membranas" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Premature rupture of membranes"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ruptura prematura de membranas"
-          }
-        }
-      }
-    },
-    "Seleccione" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seleccione"
-          }
-        }
-      }
-    },
-    "Sistema de puntuación para valorar el cuello uterino y la probabilidad de éxito en la inducción del parto" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scoring system to assess the cervix and likelihood of successful labor induction"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sistema de puntuación para valorar el cuello uterino y la probabilidad de éxito en la inducción del parto"
-          }
-        }
-      }
-    },
-    "Test de Bishop" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bishop Test"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Test de Bishop"
-          }
-        }
-      }
-    },
-    "Tu nombre" : {
+    "Parameter" : {
 
     },
-    "Usar modificadores del test" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Use test modifiers"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usar modificadores del test"
-          }
-        }
-      }
+    "Parameters" : {
+
     },
-    "Versión" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versión"
-          }
-        }
-      }
+    "Patient Information" : {
+
+    },
+    "Patient's name" : {
+
+    },
+    "points" : {
+
+    },
+    "Precise obstetric evaluation" : {
+
+    },
+    "Previous Deliveries" : {
+
+    },
+    "Quick Access" : {
+
+    },
+    "Recent Evaluations" : {
+
+    },
+    "Recommendations" : {
+
+    },
+    "Recommended Methods" : {
+
+    },
+    "Reset" : {
+
+    },
+    "Reset settings" : {
+
+    },
+    "Reset to default values" : {
+
+    },
+    "Result" : {
+
+    },
+    "Risk" : {
+
+    },
+    "Save" : {
+
+    },
+    "Saved" : {
+
+    },
+    "Scoring system to assess labor induction" : {
+
+    },
+    "Search method" : {
+
+    },
+    "Search patient" : {
+
+    },
+    "Search specialty" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Skip" : {
+
+    },
+    "Specialty" : {
+
+    },
+    "Speed" : {
+
+    },
+    "Start" : {
+
+    },
+    "Start new Bishop test" : {
+
+    },
+    "Test Parameters" : {
+
+    },
+    "The Bishop Score Test is a decision-support tool, but it should always be assessed in the complete clinical context and considering the individual characteristics of each patient." : {
+
+    },
+    "The choice of method should be based on clinical judgment, considering the individual characteristics of each patient and the results of the Bishop Test." : {
+
+    },
+    "The evaluation has been successfully saved." : {
+
+    },
+    "Try another search or category" : {
+
+    },
+    "Unfavorable" : {
+
+    },
+    "Unnamed patient" : {
+
+    },
+    "View All" : {
+
+    },
+    "Welcome" : {
+
+    },
+    "Your name" : {
+
+    },
+    "Your saved evaluations will appear here" : {
+
     }
   },
   "version" : "1.0"

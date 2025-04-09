@@ -10,120 +10,120 @@ struct SpecialtyCategory: Identifiable {
 struct MedicalSpecialties {
     static let categories = [
         SpecialtyCategory(
-            name: "Formación",
+            name: "Training",
             specialties: [
-                "Médico interno de Pregrado",
-                "Médico Pasante del Servicio Social",
-                "Médico Residente",
-                "Médico General"
+                "Undergraduate Medical Intern",
+                "Social Service Medical Intern",
+                "Resident Physician",
+                "General Practitioner"
             ]
         ),
         SpecialtyCategory(
-            name: "Especialidades Médicas Básicas",
+            name: "Basic Medical Specialties",
             specialties: [
-                "Medicina Interna",
-                "Cirugía General",
-                "Pediatría",
-                "Ginecología y Obstetricia",
-                "Anestesiología"
+                "Internal Medicine",
+                "General Surgery",
+                "Pediatrics",
+                "Gynecology and Obstetrics",
+                "Anesthesiology"
             ]
         ),
         SpecialtyCategory(
-            name: "Subespecialidades de Medicina Interna",
+            name: "Internal Medicine Subspecialties",
             specialties: [
-                "Cardiología",
-                "Neumología",
-                "Gastroenterología",
-                "Endocrinología",
-                "Hematología",
-                "Nefrología",
-                "Reumatología",
-                "Infectología",
-                "Geriatría",
-                "Oncología médica"
+                "Cardiology",
+                "Pulmonology",
+                "Gastroenterology",
+                "Endocrinology",
+                "Hematology",
+                "Nephrology",
+                "Rheumatology",
+                "Infectious Diseases",
+                "Geriatrics",
+                "Medical Oncology"
             ]
         ),
         SpecialtyCategory(
-            name: "Subespecialidades de Cirugía General",
+            name: "General Surgery Subspecialties",
             specialties: [
-                "Cirugía Oncológica",
-                "Cirugía Laparoscópica avanzada",
-                "Cirugía Hepatobiliar",
-                "Cirugía de Colon y Recto",
-                "Cirugía de Tórax",
-                "Cirugía Cardiovascular",
-                "Cirugía Vascular periférica",
-                "Cirugía de Trasplantes"
+                "Oncologic Surgery",
+                "Advanced Laparoscopic Surgery",
+                "Hepatobiliary Surgery",
+                "Colon and Rectal Surgery",
+                "Thoracic Surgery",
+                "Cardiovascular Surgery",
+                "Peripheral Vascular Surgery",
+                "Transplant Surgery"
             ]
         ),
         SpecialtyCategory(
-            name: "Otras especialidades quirúrgicas",
+            name: "Other Surgical Specialties",
             specialties: [
-                "Ortopedia y Traumatología",
-                "Neurocirugía",
-                "Cirugía Plástica y Reconstructiva",
-                "Cirugía Maxilofacial",
-                "Otorrinolaringología",
-                "Urología",
-                "Oftalmología"
+                "Orthopedics and Traumatology",
+                "Neurosurgery",
+                "Plastic and Reconstructive Surgery",
+                "Maxillofacial Surgery",
+                "Otorhinolaryngology",
+                "Urology",
+                "Ophthalmology"
             ]
         ),
         SpecialtyCategory(
-            name: "Especialidades diagnósticas y de apoyo",
+            name: "Diagnostic and Support Specialties",
             specialties: [
-                "Radiología e Imagen",
-                "Medicina Nuclear",
-                "Patología Anatómica",
-                "Patología Clínica / Laboratorio clínico",
-                "Medicina de Rehabilitación",
-                "Genética médica"
+                "Radiology and Imaging",
+                "Nuclear Medicine",
+                "Anatomical Pathology",
+                "Clinical Pathology / Clinical Laboratory",
+                "Rehabilitation Medicine",
+                "Medical Genetics"
             ]
         ),
         SpecialtyCategory(
-            name: "Especialidades de urgencias y cuidados críticos",
+            name: "Emergency and Critical Care Specialties",
             specialties: [
-                "Medicina de Urgencias",
-                "Terapia Intensiva / Medicina Crítica",
-                "Cuidados Paliativos",
-                "Toxicología clínica"
+                "Emergency Medicine",
+                "Intensive Care / Critical Care Medicine",
+                "Palliative Care",
+                "Clinical Toxicology"
             ]
         ),
         SpecialtyCategory(
-            name: "Especialidades psiquiátricas y del comportamiento",
+            name: "Psychiatric and Behavioral Specialties",
             specialties: [
-                "Psiquiatría",
-                "Psicología clínica",
-                "Neurología",
-                "Neuropsiquiatría"
+                "Psychiatry",
+                "Clinical Psychology",
+                "Neurology",
+                "Neuropsychiatry"
             ]
         ),
         SpecialtyCategory(
-            name: "Especialidades pediátricas",
+            name: "Pediatric Specialties",
             specialties: [
-                "Neonatología",
-                "Pediatría Intensiva",
-                "Cardiología pediátrica",
-                "Cirugía pediátrica",
-                "Nefrología pediátrica",
-                "Neuropediatría"
+                "Neonatology",
+                "Pediatric Intensive Care",
+                "Pediatric Cardiology",
+                "Pediatric Surgery",
+                "Pediatric Nephrology",
+                "Pediatric Neurology"
             ]
         ),
         SpecialtyCategory(
-            name: "Otras especialidades",
+            name: "Other Specialties",
             specialties: [
-                "Medicina del Dolor",
-                "Medicina del Deporte",
-                "Medicina del Trabajo / Medicina Laboral",
-                "Medicina Familiar y Comunitaria",
-                "Medicina Legal y Forense",
-                "Epidemiología clínica",
-                "Salud Pública / Medicina Preventiva",
-                "Alergología e Inmunología clínica"
+                "Pain Medicine",
+                "Sports Medicine",
+                "Occupational Medicine / Labor Medicine",
+                "Family and Community Medicine",
+                "Legal and Forensic Medicine",
+                "Clinical Epidemiology",
+                "Public Health / Preventive Medicine",
+                "Allergology and Clinical Immunology"
             ]
         )
     ]
     
-    // Lista plana de todas las especialidades para búsqueda
+    // Flat list of all specialties for search
     static var allSpecialties: [String] {
         categories.flatMap { $0.specialties }
     }

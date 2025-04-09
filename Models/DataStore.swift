@@ -26,7 +26,7 @@ class DataStore: ObservableObject {
             let data = try JSONEncoder().encode(savedScores)
             try data.write(to: savePath)
         } catch {
-            print("Error al guardar puntuaciones: \(error.localizedDescription)")
+            print("Error saving scores: \(error.localizedDescription)")
         }
     }
     
@@ -37,11 +37,11 @@ class DataStore: ObservableObject {
                 let data = try Data(contentsOf: savePath)
                 savedScores = try JSONDecoder().decode([BishopScore].self, from: data)
             } catch {
-                print("Error al decodificar las puntuaciones guardadas: \(error.localizedDescription)")
+                print("Error decoding saved scores: \(error.localizedDescription)")
                 savedScores = []
             }
         } else {
-            print("No existen puntuaciones guardadas previamente.")
+            print("No previously saved scores found.")
             savedScores = []
         }
     }

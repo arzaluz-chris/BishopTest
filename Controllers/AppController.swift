@@ -20,29 +20,31 @@ class AppController: ObservableObject {
         switch calculateInterpretation(for: score) {
         case .favorable:
             return [
-                "No se requiere maduración cervical previa",
-                "Inducción con oxitocina",
-                "Considerar amniotomía"
+                "No cervical ripening required",
+                "Induction with oxytocin",
+                "Consider amniotomy"
             ]
+            
         case .moderatelyFavorable:
             if score.nulliparous {
                 return [
-                    "En nulíparas, considerar maduración cervical",
-                    "Evaluar necesidad de prostaglandinas",
-                    "Monitorización continua durante inducción"
+                    "In nulliparous women, consider cervical ripening",
+                    "Evaluate the need for prostaglandins",
+                    "Continuous monitoring during induction"
                 ]
             } else {
                 return [
-                    "En multíparas, iniciar inducción con oxitocina",
-                    "Considerar amniotomía si es posible",
-                    "Monitorización continua durante inducción"
+                    "In multiparous women, start induction with oxytocin",
+                    "Consider amniotomy if possible",
+                    "Continuous monitoring during induction"
                 ]
             }
+            
         case .unfavorable:
             return [
-                "Maduración cervical farmacológica con prostaglandinas",
-                "Considerar métodos mecánicos (balón)",
-                "Reevaluar después de maduración cervical"
+                "Pharmacologic cervical ripening with prostaglandins",
+                "Consider mechanical methods (balloon)",
+                "Reevaluate after cervical ripening"
             ]
         }
     }

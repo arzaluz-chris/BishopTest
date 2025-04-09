@@ -9,7 +9,7 @@ struct Constants {
     static let appCopyright = "© 2025 BishopTest App"
     
     // URLs
-    static let wikipediaURL = "https://es.wikipedia.org/wiki/Test_de_Bishop"
+    static let wikipediaURL = "https://en.wikipedia.org/wiki/Bishop_score"
     static let privacyPolicyURL = "https://www.bishoptest.app/privacy"
     
     // UI Constants

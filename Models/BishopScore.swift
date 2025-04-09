@@ -1,6 +1,6 @@
 import Foundation
 
-// Esta es la estructura principal que representa el Test de Bishop
+// This is the main structure that represents the Bishop Test
 struct BishopScore: Identifiable, Codable {
     var id = UUID()
     var date: Date
@@ -8,27 +8,27 @@ struct BishopScore: Identifiable, Codable {
     var patientAge: Int?
     var previousDeliveries: Int
     
-    // Parámetros del Test de Bishop
+    // Parameters of the Bishop Test
     var dilation: Dilation
     var effacement: Effacement
     var consistency: Consistency
     var position: Position
     var station: Station
     
-    // Modificadores
+    // Modifiers
     var preeclampsia: Bool
     var postdatePregnancy: Bool
     var nulliparous: Bool
     var prematureRupture: Bool
     
-    // Valores por defecto para una nueva evaluación
+    // Default values for a new evaluation
     init(date: Date = Date(), patientName: String? = nil, patientAge: Int? = nil, previousDeliveries: Int = 0) {
         self.date = date
         self.patientName = patientName
         self.patientAge = patientAge
         self.previousDeliveries = previousDeliveries
         
-        // Valores por defecto
+        // Default values
         self.dilation = .zero
         self.effacement = .zeroToThirty
         self.consistency = .firm
@@ -41,18 +41,18 @@ struct BishopScore: Identifiable, Codable {
         self.prematureRupture = false
     }
     
-    // Función para calcular la puntuación con o sin modificadores
+    // Function to calculate the score with or without modifiers
     func calculateTotalScore(applyModifiers: Bool = true) -> Int {
         var score = 0
         
-        // Sumar puntos por parámetros
+        // Add points for parameters
         score += dilation.rawValue
         score += effacement.rawValue
         score += consistency.rawValue
         score += position.rawValue
         score += station.rawValue
         
-        // Aplicar modificadores solo si se solicita
+        // Apply modifiers only if requested
         if applyModifiers {
             if preeclampsia { score += 1 }
             if previousDeliveries > 0 { score += previousDeliveries }
@@ -61,15 +61,15 @@ struct BishopScore: Identifiable, Codable {
             if prematureRupture { score -= 1 }
         }
         
-        return max(0, score) // No permitir puntuaciones negativas
+        return max(0, score) // Do not allow negative scores
     }
     
-    // Calcula la puntuación total (con modificadores por defecto)
+    // Calculates the total score (with default modifiers)
     var totalScore: Int {
         return calculateTotalScore()
     }
     
-    // Interpretación del resultado
+    // Interpretation of the result
     var interpretation: ScoreInterpretation {
         if totalScore >= 8 {
             return .favorable
@@ -80,41 +80,45 @@ struct BishopScore: Identifiable, Codable {
         }
     }
     
-    // Recomendaciones basadas en la puntuación
+    // Recommendations based on the score
     var recommendations: [String] {
         switch interpretation {
         case .favorable:
             return [
-                "No se requiere maduración cervical previa",
-                "Inducción con oxitocina",
-                "Considerar amniotomía"
+                "No cervical ripening required",
+                "Induction with oxytocin",
+                "Consider amniotomy"
             ]
         case .moderatelyFavorable:
             if nulliparous {
                 return [
-                    "En nulíparas, considerar maduración cervical",
-                    "Evaluar necesidad de prostaglandinas",
-                    "Monitorización continua durante inducción"
+                    "In nulliparous women, consider cervical ripening",
+                    "Evaluate the need for prostaglandins",
+                    "Continuous monitoring during induction"
                 ]
             } else {
                 return [
-                    "En multíparas, iniciar inducción con oxitocina",
-                    "Considerar amniotomía si es posible",
-                    "Monitorización continua durante inducción"
+                    "In multiparous women, start induction with oxytocin",
+                    "Consider amniotomy if possible",
+                    "Continuous monitoring during induction"
                 ]
             }
         case .unfavorable:
             return [
-                "Maduración cervical farmacológica con prostaglandinas",
-                "Considerar métodos mecánicos (balón)",
-                "Reevaluar después de maduración cervical"
+                "Pharmacological cervical ripening with prostaglandins",
+                "Consider mechanical methods (balloon)",
+                "Reevaluate after cervical ripening"
             ]
         }
     }
 }
 
-// Enumeraciones para los parámetros del Test de Bishop
-enum Dilation: Int, Codable, CaseIterable, Identifiable {
+// Enumerations for the parameters of the Bishop Test
+// Code to update the enumerations in Models/BishopScore.swift
+// Add conformance to CustomStringConvertible to each enumeration
+
+// For the Dilation enumeration:
+enum Dilation: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case zero = 0
     case oneToTwo = 1
     case threeToFour = 2
@@ -132,7 +136,8 @@ enum Dilation: Int, Codable, CaseIterable, Identifiable {
     }
 }
 
-enum Effacement: Int, Codable, CaseIterable, Identifiable {
+// For the Effacement enumeration:
+enum Effacement: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case zeroToThirty = 0
     case fortyToFifty = 1
     case sixtyToSeventy = 2
@@ -150,7 +155,8 @@ enum Effacement: Int, Codable, CaseIterable, Identifiable {
     }
 }
 
-enum Consistency: Int, Codable, CaseIterable, Identifiable {
+// For the Consistency enumeration:
+enum Consistency: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case firm = 0
     case medium = 1
     case soft = 2
@@ -159,14 +165,15 @@ enum Consistency: Int, Codable, CaseIterable, Identifiable {
     
     var description: String {
         switch self {
-        case .firm: return "Firme"
-        case .medium: return "Media"
-        case .soft: return "Blanda"
+        case .firm: return "Firm"
+        case .medium: return "Medium"
+        case .soft: return "Soft"
         }
     }
 }
 
-enum Position: Int, Codable, CaseIterable, Identifiable {
+// For the Position enumeration:
+enum Position: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case posterior = 0
     case middle = 1
     case anterior = 2
@@ -176,13 +183,14 @@ enum Position: Int, Codable, CaseIterable, Identifiable {
     var description: String {
         switch self {
         case .posterior: return "Posterior"
-        case .middle: return "Media"
+        case .middle: return "Middle"
         case .anterior: return "Anterior"
         }
     }
 }
 
-enum Station: Int, Codable, CaseIterable, Identifiable {
+// For the Station enumeration:
+enum Station: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case minusThree = 0
     case minusTwo = 1
     case minusOneOrZero = 2
@@ -199,20 +207,19 @@ enum Station: Int, Codable, CaseIterable, Identifiable {
         }
     }
 }
-
 enum ScoreInterpretation: String, Codable {
-    case favorable = "Cérvix Favorable"
-    case moderatelyFavorable = "Cérvix Moderadamente Favorable"
-    case unfavorable = "Cérvix Desfavorable"
+    case favorable = "Favorable Cervix"
+    case moderatelyFavorable = "Moderately Favorable Cervix"
+    case unfavorable = "Unfavorable Cervix"
     
     var description: String {
         switch self {
         case .favorable:
-            return "Un puntaje mayor a 8 indica buenas condiciones para la inducción del parto."
+            return "A score greater than 8 indicates good conditions for labor induction."
         case .moderatelyFavorable:
-            return "Un puntaje entre 6-7 indica condiciones moderadas para la inducción, especialmente en multíparas."
+            return "A score between 6-7 indicates moderate conditions for induction, especially in multiparous women."
         case .unfavorable:
-            return "Un puntaje menor a 6 indica condiciones desfavorables, se recomienda maduración cervical previa."
+            return "A score less than 6 indicates unfavorable conditions, cervical ripening is recommended."
         }
     }
     

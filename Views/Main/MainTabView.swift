@@ -1,51 +1,110 @@
+// MainTabView.swift
 import SwiftUI
 import Combine
 
 struct MainTabView: View {
     @EnvironmentObject var dataStore: DataStore
     @State private var selectedTab = 0
-    
     @Environment(\.selectedTabPublisher) var selectedTabPublisher
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            HomeView()
-                .tabItem {
-                    Label("Inicio", systemImage: "house")
-                }
-                .tag(0)
-            
-            BishopScoreView()
-                .tabItem {
-                    Label("Evaluación", systemImage: "list.bullet.clipboard")
-                }
-                .tag(1)
-            
-            HistoryView()
-                .tabItem {
-                    Label("Historial", systemImage: "clock")
-                }
-                .tag(2)
+        ZStack(alignment: .bottom) {
+            // Main content
+            TabView(selection: $selectedTab) {
+                HomeView()
+                    .tag(0)
                 
-            InductionMethodsView()
-                .tabItem {
-                    Label("Métodos", systemImage: "doc.text")
-                }
-                .tag(3)
+                BishopScoreView()
+                    .tag(1)
+                
+                HistoryView()
+                    .tag(2)
+                
+                InductionMethodsView()
+                    .tag(3)
+                
+                SettingsView()
+                    .tag(4)
+            }
+            .edgesIgnoringSafeArea(.bottom)
+            .onReceive(selectedTabPublisher) { newTab in
+                selectedTab = newTab
+            }
             
-            SettingsView()
-                .tabItem {
-                    Label("Ajustes", systemImage: "gear")
-                }
-                .tag(4)
-        }
-        .onReceive(selectedTabPublisher) { newTab in
-            selectedTab = newTab
+            // Custom tab bar
+            CustomTabBar(selectedTab: $selectedTab)
         }
     }
 }
 
-// Código de environment key sin cambios
+// Custom and modern tab bar
+struct CustomTabBar: View {
+    @Binding var selectedTab: Int
+    @Environment(\.colorScheme) var colorScheme
+    
+    // Navigation bar options
+    private let tabs: [(image: String, selectedImage: String, title: String)] = [
+        ("house", "house.fill", "Home"),
+        ("clipboard", "clipboard.fill", "Test"),
+        ("clock", "clock.fill", "History"),
+        ("list.bullet.clipboard", "list.bullet.clipboard.fill", "Methods"),
+        ("gearshape", "gearshape.fill", "Settings")
+    ]
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            ForEach(0..<tabs.count, id: \.self) { index in
+                Spacer()
+                
+                // Button for each tab
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        selectedTab = index
+                    }
+                }) {
+                    VStack(spacing: 4) {
+                        // Icon with background circle when selected
+                        ZStack {
+                            if selectedTab == index {
+                                Circle()
+                                    .fill(colorScheme == .dark ?
+                                          BishopDesign.Colors.primary.opacity(0.3) :
+                                          BishopDesign.Colors.primary.opacity(0.15))
+                                    .frame(width: 40, height: 40)
+                            }
+                            
+                            Image(systemName: selectedTab == index ? tabs[index].selectedImage : tabs[index].image)
+                                .font(.system(size: 20))
+                                .foregroundColor(selectedTab == index ? BishopDesign.Colors.primary : .gray)
+                        }
+                        
+                        // Text visible only for the selected tab
+                        if selectedTab == index {
+                            Text(tabs[index].title)
+                                .font(.system(size: 11, weight: .semibold, design: .rounded))
+                                .foregroundColor(BishopDesign.Colors.primary)
+                        }
+                    }
+                    .frame(height: selectedTab == index ? 55 : 40)
+                    .offset(y: selectedTab == index ? -8 : 0)
+                }
+                
+                Spacer()
+            }
+        }
+        .frame(height: 60)
+        .background(
+            // Tab bar background with shadow
+            Rectangle()
+                .fill(Color(.systemBackground))
+                .cornerRadius(25, corners: [.topLeft, .topRight])
+                .shadow(color: Color.black.opacity(0.08), radius: 8, x: 0, y: -3)
+                .edgesIgnoringSafeArea(.bottom)
+        )
+    }
+}
+
+// Keep existing environment key code
 struct SelectedTabKey: EnvironmentKey {
     static let defaultValue = PassthroughSubject<Int, Never>()
 }

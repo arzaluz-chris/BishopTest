@@ -10,7 +10,7 @@ struct SpecialtyPickerView: View {
         if searchText.isEmpty {
             return MedicalSpecialties.categories
         } else {
-            // Filtrar especialidades que coincidan con la búsqueda
+            // Filter specialties that match the search query
             return MedicalSpecialties.categories.compactMap { category in
                 let filteredSpecialties = category.specialties.filter { $0.localizedCaseInsensitiveContains(searchText) }
                 if filteredSpecialties.isEmpty {
@@ -46,9 +46,9 @@ struct SpecialtyPickerView: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .searchable(text: $searchText, prompt: "Buscar especialidad")
-            .navigationBarTitle("Especialidad", displayMode: .inline)
-            .navigationBarItems(trailing: Button("Cancelar") {
+            .searchable(text: $searchText, prompt: "Search specialty")
+            .navigationBarTitle("Specialty", displayMode: .inline)
+            .navigationBarItems(trailing: Button("Cancel") {
                 presentationMode.wrappedValue.dismiss()
             })
         }
