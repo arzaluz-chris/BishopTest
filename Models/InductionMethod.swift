@@ -31,84 +31,84 @@ struct InductionMethod: Identifiable {
     // Predefined induction methods
     static let oxytocin = [
         InductionMethod(
-            name: "Oxytocin",
-            description: "Synthetic hormone that stimulates uterine contractions.",
+            name: NSLocalizedString("Oxytocin", comment: "Induction method name"),
+            description: NSLocalizedString("Synthetic hormone that stimulates uterine contractions.", comment: "Oxytocin description"),
             indications: [
-                "Bishop Score ≥ 6",
-                "Favorable cervix"
+                NSLocalizedString("Bishop Score ≥ 6", comment: "Oxytocin indication"),
+                NSLocalizedString("Favorable cervix", comment: "Oxytocin indication")
             ],
             contraindications: [
-                "Placenta previa",
-                "Vasa previa",
-                "Cord prolapse"
+                NSLocalizedString("Placenta previa", comment: "Oxytocin contraindication"),
+                NSLocalizedString("Vasa previa", comment: "Oxytocin contraindication"),
+                NSLocalizedString("Cord prolapse", comment: "Oxytocin contraindication")
             ],
             risks: [
-                "Uterine hyperstimulation",
-                "FHR abnormalities",
-                "Uterine rupture (rare)"
+                NSLocalizedString("Uterine hyperstimulation", comment: "Oxytocin risk"),
+                NSLocalizedString("FHR abnormalities", comment: "Oxytocin risk"),
+                NSLocalizedString("Uterine rupture (rare)", comment: "Oxytocin risk")
             ]
         )
     ]
     
     static let prostaglandins = [
         InductionMethod(
-            name: "Dinoprostone",
-            description: "Prostaglandin E2 that promotes cervical ripening.",
+            name: NSLocalizedString("Dinoprostone", comment: "Induction method name"),
+            description: NSLocalizedString("Prostaglandin E2 that promotes cervical ripening.", comment: "Dinoprostone description"),
             indications: [
-                "Bishop Score < 6",
-                "Unfavorable cervix"
+                NSLocalizedString("Bishop Score < 6", comment: "Dinoprostone indication"),
+                NSLocalizedString("Unfavorable cervix", comment: "Dinoprostone indication")
             ],
             contraindications: [
-                "Previous cesarean section",
-                "Grand multiparity (≥6 births)",
-                "Hypersensitivity to prostaglandins"
+                NSLocalizedString("Previous cesarean section", comment: "Dinoprostone contraindication"),
+                NSLocalizedString("Grand multiparity (≥6 births)", comment: "Dinoprostone contraindication"),
+                NSLocalizedString("Hypersensitivity to prostaglandins", comment: "Dinoprostone contraindication")
             ],
             risks: [
-                "Tachysystole",
-                "Uterine hyperstimulation",
-                "Uterine rupture (rare)"
+                NSLocalizedString("Tachysystole", comment: "Dinoprostone risk"),
+                NSLocalizedString("Uterine hyperstimulation", comment: "Dinoprostone risk"),
+                NSLocalizedString("Uterine rupture (rare)", comment: "Dinoprostone risk")
             ]
         ),
         InductionMethod(
-            name: "Misoprostol",
-            description: "Prostaglandin E1 that promotes cervical ripening.",
+            name: NSLocalizedString("Misoprostol", comment: "Induction method name"),
+            description: NSLocalizedString("Prostaglandin E1 that promotes cervical ripening.", comment: "Misoprostol description"),
             indications: [
-                "Bishop Score < 6",
-                "Unfavorable cervix",
-                "Low risk of hyperstimulation"
+                NSLocalizedString("Bishop Score < 6", comment: "Misoprostol indication"),
+                NSLocalizedString("Unfavorable cervix", comment: "Misoprostol indication"),
+                NSLocalizedString("Low risk of hyperstimulation", comment: "Misoprostol indication")
             ],
             contraindications: [
-                "Previous cesarean section",
-                "Previous uterine surgery",
-                "Hypersensitivity to prostaglandins"
+                NSLocalizedString("Previous cesarean section", comment: "Misoprostol contraindication"),
+                NSLocalizedString("Previous uterine surgery", comment: "Misoprostol contraindication"),
+                NSLocalizedString("Hypersensitivity to prostaglandins", comment: "Misoprostol contraindication")
             ],
             risks: [
-                "Tachysystole",
-                "Uterine hyperstimulation",
-                "Uterine rupture"
+                NSLocalizedString("Tachysystole", comment: "Misoprostol risk"),
+                NSLocalizedString("Uterine hyperstimulation", comment: "Misoprostol risk"),
+                NSLocalizedString("Uterine rupture", comment: "Misoprostol risk")
             ]
         )
     ]
     
     static let mechanical = [
         InductionMethod(
-            name: "Double balloon catheter",
-            description: "Mechanical double balloon device that promotes cervical dilation.",
+            name: NSLocalizedString("Double balloon catheter", comment: "Induction method name"),
+            description: NSLocalizedString("Mechanical double balloon device that promotes cervical dilation.", comment: "Mechanical method description"),
             indications: [
-                "Bishop Score < 6",
-                "Unfavorable cervix",
-                "Previous cesarean section",
-                "High risk of hyperstimulation"
+                NSLocalizedString("Bishop Score < 6", comment: "Mechanical method indication"),
+                NSLocalizedString("Unfavorable cervix", comment: "Mechanical method indication"),
+                NSLocalizedString("Previous cesarean section", comment: "Mechanical method indication"),
+                NSLocalizedString("High risk of hyperstimulation", comment: "Mechanical method indication")
             ],
             contraindications: [
-                "PROM (Premature Rupture of Membranes)",
-                "Marginal placenta",
-                "Active maternal infections"
+                NSLocalizedString("PROM (Premature Rupture of Membranes)", comment: "Mechanical method contraindication"),
+                NSLocalizedString("Marginal placenta", comment: "Mechanical method contraindication"),
+                NSLocalizedString("Active maternal infections", comment: "Mechanical method contraindication")
             ],
             risks: [
-                "Discomfort during placement",
-                "Mild bleeding",
-                "Lower risk of uterine hyperstimulation"
+                NSLocalizedString("Discomfort during placement", comment: "Mechanical method risk"),
+                NSLocalizedString("Mild bleeding", comment: "Mechanical method risk"),
+                NSLocalizedString("Lower risk of uterine hyperstimulation", comment: "Mechanical method risk")
             ]
         )
     ]

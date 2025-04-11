@@ -1,12 +1,12 @@
-//  Constants.swift
+// Constants.swift
 import Foundation
 import SwiftUI
 
 struct Constants {
     // App Information
-    static let appName = "BishopTest"
-    static let appVersion = "1.0.0"
-    static let appCopyright = "© 2025 BishopTest App"
+    static let appName = NSLocalizedString("BishopTest", comment: "App name")
+    static let appVersion = NSLocalizedString("1.0.0", comment: "App version")
+    static let appCopyright = NSLocalizedString("© 2025 BishopTest App", comment: "Copyright notice")
     
     // URLs
     static let wikipediaURL = "https://en.wikipedia.org/wiki/Bishop_score"

@@ -32,27 +32,27 @@ struct BishopDesign {
     // TYPOGRAPHY
     struct Typography {
         static func heading1() -> some View {
-            Text("")
+            Text(NSLocalizedString("Heading", comment: "Generic heading"))
                 .font(.system(size: 28, weight: .bold, design: .rounded))
         }
         
         static func heading2() -> some View {
-            Text("")
+            Text(NSLocalizedString("Subheading", comment: "Generic subheading"))
                 .font(.system(size: 22, weight: .bold, design: .rounded))
         }
         
         static func heading3() -> some View {
-            Text("")
+            Text(NSLocalizedString("Section Title", comment: "Generic section title"))
                 .font(.system(size: 18, weight: .semibold, design: .rounded))
         }
         
         static func body() -> some View {
-            Text("")
+            Text(NSLocalizedString("Body Text", comment: "Generic body text"))
                 .font(.system(size: 16, weight: .regular, design: .rounded))
         }
         
         static func caption() -> some View {
-            Text("")
+            Text(NSLocalizedString("Caption", comment: "Generic caption text"))
                 .font(.system(size: 14, weight: .regular, design: .rounded))
                 .foregroundColor(.secondary)
         }
@@ -60,50 +60,49 @@ struct BishopDesign {
     
     // COMPONENTS
     struct Components {
-        // Primary button
-        struct PrimaryButton: View {
-            let title: String
-            let icon: String?
-            let action: () -> Void
-            let isDisabled: Bool
-            
-            init(title: String, icon: String? = nil, isDisabled: Bool = false, action: @escaping () -> Void) {
-                self.title = title
-                self.icon = icon
-                self.action = action
-                self.isDisabled = isDisabled
-            }
-            
-            var body: some View {
-                Button(action: action) {
-                    HStack(spacing: 8) {
-                        if let icon = icon {
-                            Image(systemName: icon)
-                                .font(.system(size: 16, weight: .semibold))
-                        }
-                        
-                        Text(title)
-                            .font(.system(size: 17, weight: .semibold, design: .rounded))
-                            .frame(maxWidth: .infinity)
-                    }
-                    .padding(.vertical, 16)
-                    .padding(.horizontal, 20)
-                    .background(isDisabled ? Color.gray.opacity(0.3) : Colors.primary)
-                    .foregroundColor(.white)
-                    .cornerRadius(Layout.buttonCornerRadius)
-                    .shadow(color: isDisabled ? Color.clear : Colors.primary.opacity(0.4), radius: 8, x: 0, y: 4)
-                }
-                .disabled(isDisabled)
-            }
-        }
-        
+         // PrimaryButton now uses localized "title"
+         struct PrimaryButton: View {
+             let title: LocalizedStringKey
+             let icon: String?
+             let action: () -> Void
+             let isDisabled: Bool
+             
+             init(title: LocalizedStringKey, icon: String? = nil, isDisabled: Bool = false, action: @escaping () -> Void) {
+                 self.title = title
+                 self.icon = icon
+                 self.action = action
+                 self.isDisabled = isDisabled
+             }
+             
+             var body: some View {
+                 Button(action: action) {
+                     HStack(spacing: 8) {
+                         if let icon = icon {
+                             Image(systemName: icon)
+                                 .font(.system(size: 16, weight: .semibold))
+                         }
+                         
+                         Text(title)
+                             .font(.system(size: 17, weight: .semibold, design: .rounded))
+                             .frame(maxWidth: .infinity)
+                     }
+                     .padding(.vertical, 16)
+                     .padding(.horizontal, 20)
+                     .background(isDisabled ? Color.gray.opacity(0.3) : Colors.primary)
+                     .foregroundColor(.white)
+                     .cornerRadius(Layout.buttonCornerRadius)
+                     .shadow(color: isDisabled ? Color.clear : Colors.primary.opacity(0.4), radius: 8, x: 0, y: 4)
+                 }
+                 .disabled(isDisabled)
+             }
+         }
         // Secondary button
         struct SecondaryButton: View {
-            let title: String
+            let title: LocalizedStringKey
             let icon: String?
             let action: () -> Void
             
-            init(title: String, icon: String? = nil, action: @escaping () -> Void) {
+            init(title: LocalizedStringKey, icon: String? = nil, action: @escaping () -> Void) {
                 self.title = title
                 self.icon = icon
                 self.action = action

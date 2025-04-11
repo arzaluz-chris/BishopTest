@@ -42,13 +42,13 @@ struct CustomTabBar: View {
     @Binding var selectedTab: Int
     @Environment(\.colorScheme) var colorScheme
     
-    // Navigation bar options
+    // Navigation bar options with localized titles
     private let tabs: [(image: String, selectedImage: String, title: String)] = [
-        ("house", "house.fill", "Home"),
-        ("clipboard", "clipboard.fill", "Test"),
-        ("clock", "clock.fill", "History"),
-        ("list.bullet.clipboard", "list.bullet.clipboard.fill", "Methods"),
-        ("gearshape", "gearshape.fill", "Settings")
+        ("house", "house.fill", NSLocalizedString("Home", comment: "Home tab title")),
+        ("clipboard", "clipboard.fill", NSLocalizedString("Test", comment: "Test tab title")),
+        ("clock", "clock.fill", NSLocalizedString("History", comment: "History tab title")),
+        ("list.bullet.clipboard", "list.bullet.clipboard.fill", NSLocalizedString("Methods", comment: "Methods tab title")),
+        ("gearshape", "gearshape.fill", NSLocalizedString("Settings", comment: "Settings tab title"))
     ]
     
     var body: some View {

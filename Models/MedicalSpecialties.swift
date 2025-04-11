@@ -10,15 +10,15 @@ struct SpecialtyCategory: Identifiable {
 struct MedicalSpecialties {
     static let categories = [
         SpecialtyCategory(
-            name: "Medical Level",
+            name: NSLocalizedString("Medical Level", comment: "Category name for medical levels"),
             specialties: [
-                "Student",
-                "Undergraduate Medical Intern",
-                "Social Service Medical Intern",
-                "Nurse",
-                "General Practitioner",
-                "Resident Physician",
-                "Specialist"
+                NSLocalizedString("Student", comment: "Medical level"),
+                NSLocalizedString("Undergraduate Medical Intern", comment: "Medical level"),
+                NSLocalizedString("Social Service Medical Intern", comment: "Medical level"),
+                NSLocalizedString("Nurse", comment: "Medical level"),
+                NSLocalizedString("General Practitioner", comment: "Medical level"),
+                NSLocalizedString("Resident Physician", comment: "Medical level"),
+                NSLocalizedString("Specialist", comment: "Medical level")
             ]
         )
     ]

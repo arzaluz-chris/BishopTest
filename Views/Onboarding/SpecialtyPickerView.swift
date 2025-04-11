@@ -21,12 +21,12 @@ struct SpecialtyPickerView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                // Reduce the size of the search bar and add padding
+                // Search bar
                 HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.secondary)
                     
-                    TextField("Search specialty", text: $searchText)
+                    TextField(NSLocalizedString("Search specialty", comment: "Placeholder for specialty search"), text: $searchText)
                         .font(.system(size: 16, design: .rounded))
                 }
                 .padding(10)
@@ -36,7 +36,7 @@ struct SpecialtyPickerView: View {
                 .padding(.bottom, 12)
                 .padding(.top, 8)
                 
-                // List with more spacing
+                // List of specialties
                 List {
                     // Empty text view to create spacing
                     Text("")
@@ -68,8 +68,8 @@ struct SpecialtyPickerView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
             }
-            .navigationBarTitle("Specialty", displayMode: .inline)
-            .navigationBarItems(trailing: Button("Cancel") {
+            .navigationBarTitle(NSLocalizedString("Specialty", comment: "Navigation bar title for specialty selection"), displayMode: .inline)
+            .navigationBarItems(trailing: Button(NSLocalizedString("Cancel", comment: "Cancel button")) {
                 presentationMode.wrappedValue.dismiss()
             })
         }

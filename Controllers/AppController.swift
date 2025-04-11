@@ -1,4 +1,4 @@
-//  AppController.swift
+// AppController.swift
 import Foundation
 import SwiftUI
 import Combine
@@ -20,31 +20,31 @@ class AppController: ObservableObject {
         switch calculateInterpretation(for: score) {
         case .favorable:
             return [
-                "No cervical ripening required",
-                "Induction with oxytocin",
-                "Consider amniotomy"
+                NSLocalizedString("No cervical ripening required", comment: "Favorable recommendation"),
+                NSLocalizedString("Induction with oxytocin", comment: "Favorable recommendation"),
+                NSLocalizedString("Consider amniotomy", comment: "Favorable recommendation")
             ]
             
         case .moderatelyFavorable:
             if score.nulliparous {
                 return [
-                    "In nulliparous women, consider cervical ripening",
-                    "Evaluate the need for prostaglandins",
-                    "Continuous monitoring during induction"
+                    NSLocalizedString("In nulliparous women, consider cervical ripening", comment: "Moderately favorable recommendation for nulliparous"),
+                    NSLocalizedString("Evaluate the need for prostaglandins", comment: "Moderately favorable recommendation for nulliparous"),
+                    NSLocalizedString("Continuous monitoring during induction", comment: "Moderately favorable recommendation for nulliparous")
                 ]
             } else {
                 return [
-                    "In multiparous women, start induction with oxytocin",
-                    "Consider amniotomy if possible",
-                    "Continuous monitoring during induction"
+                    NSLocalizedString("In multiparous women, start induction with oxytocin", comment: "Moderately favorable recommendation for multiparous"),
+                    NSLocalizedString("Consider amniotomy if possible", comment: "Moderately favorable recommendation for multiparous"),
+                    NSLocalizedString("Continuous monitoring during induction", comment: "Moderately favorable recommendation for multiparous")
                 ]
             }
             
         case .unfavorable:
             return [
-                "Pharmacologic cervical ripening with prostaglandins",
-                "Consider mechanical methods (balloon)",
-                "Reevaluate after cervical ripening"
+                NSLocalizedString("Pharmacologic cervical ripening with prostaglandins", comment: "Unfavorable recommendation"),
+                NSLocalizedString("Consider mechanical methods (balloon)", comment: "Unfavorable recommendation"),
+                NSLocalizedString("Reevaluate after cervical ripening", comment: "Unfavorable recommendation")
             ]
         }
     }

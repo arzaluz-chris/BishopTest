@@ -1,6 +1,6 @@
+// BishopScore.swift
 import Foundation
 
-// This is the main structure that represents the Bishop Test
 struct BishopScore: Identifiable, Codable {
     var id = UUID()
     var date: Date
@@ -85,39 +85,35 @@ struct BishopScore: Identifiable, Codable {
         switch interpretation {
         case .favorable:
             return [
-                "No cervical ripening required",
-                "Induction with oxytocin",
-                "Consider amniotomy"
+                NSLocalizedString("No cervical ripening required", comment: "Recommendation for favorable cervix"),
+                NSLocalizedString("Induction with oxytocin", comment: "Recommendation for favorable cervix"),
+                NSLocalizedString("Consider amniotomy", comment: "Recommendation for favorable cervix")
             ]
         case .moderatelyFavorable:
             if nulliparous {
                 return [
-                    "In nulliparous women, consider cervical ripening",
-                    "Evaluate the need for prostaglandins",
-                    "Continuous monitoring during induction"
+                    NSLocalizedString("In nulliparous women, consider cervical ripening", comment: "Recommendation for moderately favorable cervix in nulliparous"),
+                    NSLocalizedString("Evaluate the need for prostaglandins", comment: "Recommendation for moderately favorable cervix in nulliparous"),
+                    NSLocalizedString("Continuous monitoring during induction", comment: "Recommendation for moderately favorable cervix in nulliparous")
                 ]
             } else {
                 return [
-                    "In multiparous women, start induction with oxytocin",
-                    "Consider amniotomy if possible",
-                    "Continuous monitoring during induction"
+                    NSLocalizedString("In multiparous women, start induction with oxytocin", comment: "Recommendation for moderately favorable cervix in multiparous"),
+                    NSLocalizedString("Consider amniotomy if possible", comment: "Recommendation for moderately favorable cervix in multiparous"),
+                    NSLocalizedString("Continuous monitoring during induction", comment: "Recommendation for moderately favorable cervix in multiparous")
                 ]
             }
         case .unfavorable:
             return [
-                "Pharmacological cervical ripening with prostaglandins",
-                "Consider mechanical methods (balloon)",
-                "Reevaluate after cervical ripening"
+                NSLocalizedString("Pharmacological cervical ripening with prostaglandins", comment: "Recommendation for unfavorable cervix"),
+                NSLocalizedString("Consider mechanical methods (balloon)", comment: "Recommendation for unfavorable cervix"),
+                NSLocalizedString("Reevaluate after cervical ripening", comment: "Recommendation for unfavorable cervix")
             ]
         }
     }
 }
 
-// Enumerations for the parameters of the Bishop Test
-// Code to update the enumerations in Models/BishopScore.swift
-// Add conformance to CustomStringConvertible to each enumeration
-
-// For the Dilation enumeration:
+// Localize enum descriptions
 enum Dilation: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case zero = 0
     case oneToTwo = 1
@@ -128,15 +124,14 @@ enum Dilation: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible
     
     var description: String {
         switch self {
-        case .zero: return "0 cm"
-        case .oneToTwo: return "1-2 cm"
-        case .threeToFour: return "3-4 cm"
-        case .fiveOrMore: return "≥5 cm"
+        case .zero: return NSLocalizedString("0 cm", comment: "Dilation value")
+        case .oneToTwo: return NSLocalizedString("1-2 cm", comment: "Dilation value")
+        case .threeToFour: return NSLocalizedString("3-4 cm", comment: "Dilation value")
+        case .fiveOrMore: return NSLocalizedString("≥5 cm", comment: "Dilation value")
         }
     }
 }
 
-// For the Effacement enumeration:
 enum Effacement: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case zeroToThirty = 0
     case fortyToFifty = 1
@@ -147,15 +142,14 @@ enum Effacement: Int, Codable, CaseIterable, Identifiable, CustomStringConvertib
     
     var description: String {
         switch self {
-        case .zeroToThirty: return "0-30%"
-        case .fortyToFifty: return "40-50%"
-        case .sixtyToSeventy: return "60-70%"
-        case .eightyOrMore: return "≥80%"
+        case .zeroToThirty: return NSLocalizedString("0-30%", comment: "Effacement value")
+        case .fortyToFifty: return NSLocalizedString("40-50%", comment: "Effacement value")
+        case .sixtyToSeventy: return NSLocalizedString("60-70%", comment: "Effacement value")
+        case .eightyOrMore: return NSLocalizedString("≥80%", comment: "Effacement value")
         }
     }
 }
 
-// For the Consistency enumeration:
 enum Consistency: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case firm = 0
     case medium = 1
@@ -165,14 +159,13 @@ enum Consistency: Int, Codable, CaseIterable, Identifiable, CustomStringConverti
     
     var description: String {
         switch self {
-        case .firm: return "Firm"
-        case .medium: return "Medium"
-        case .soft: return "Soft"
+        case .firm: return NSLocalizedString("Firm", comment: "Consistency value")
+        case .medium: return NSLocalizedString("Medium", comment: "Consistency value")
+        case .soft: return NSLocalizedString("Soft", comment: "Consistency value")
         }
     }
 }
 
-// For the Position enumeration:
 enum Position: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case posterior = 0
     case middle = 1
@@ -182,14 +175,13 @@ enum Position: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible
     
     var description: String {
         switch self {
-        case .posterior: return "Posterior"
-        case .middle: return "Middle"
-        case .anterior: return "Anterior"
+        case .posterior: return NSLocalizedString("Posterior", comment: "Position value")
+        case .middle: return NSLocalizedString("Middle", comment: "Position value")
+        case .anterior: return NSLocalizedString("Anterior", comment: "Position value")
         }
     }
 }
 
-// For the Station enumeration:
 enum Station: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case minusThree = 0
     case minusTwo = 1
@@ -200,13 +192,14 @@ enum Station: Int, Codable, CaseIterable, Identifiable, CustomStringConvertible 
     
     var description: String {
         switch self {
-        case .minusThree: return "-3"
-        case .minusTwo: return "-2"
-        case .minusOneOrZero: return "-1/0"
-        case .plusOneOrPlusTwo: return "+1/+2"
+        case .minusThree: return NSLocalizedString("-3", comment: "Station value")
+        case .minusTwo: return NSLocalizedString("-2", comment: "Station value")
+        case .minusOneOrZero: return NSLocalizedString("-1/0", comment: "Station value")
+        case .plusOneOrPlusTwo: return NSLocalizedString("+1/+2", comment: "Station value")
         }
     }
 }
+
 enum ScoreInterpretation: String, Codable {
     case favorable = "Favorable Cervix"
     case moderatelyFavorable = "Moderately Favorable Cervix"
@@ -215,11 +208,11 @@ enum ScoreInterpretation: String, Codable {
     var description: String {
         switch self {
         case .favorable:
-            return "A score greater than 8 indicates good conditions for labor induction."
+            return NSLocalizedString("A score greater than 8 indicates good conditions for labor induction.", comment: "Favorable cervix description")
         case .moderatelyFavorable:
-            return "A score between 6-7 indicates moderate conditions for induction, especially in multiparous women."
+            return NSLocalizedString("A score between 6-7 indicates moderate conditions for induction, especially in multiparous women.", comment: "Moderately favorable cervix description")
         case .unfavorable:
-            return "A score less than 6 indicates unfavorable conditions, cervical ripening is recommended."
+            return NSLocalizedString("A score less than 6 indicates unfavorable conditions, cervical ripening is recommended.", comment: "Unfavorable cervix description")
         }
     }
     

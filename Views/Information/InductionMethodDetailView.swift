@@ -30,11 +30,11 @@ struct InductionMethodDetailView: View {
     // Determine method type to show category
     private var methodType: String {
         if InductionMethod.oxytocin.contains(where: { $0.id == method.id }) {
-            return "Oxytocin"
+            return NSLocalizedString("Oxytocin", comment: "Oxytocin method type")
         } else if InductionMethod.prostaglandins.contains(where: { $0.id == method.id }) {
-            return "Prostaglandin"
+            return NSLocalizedString("Prostaglandin", comment: "Prostaglandin method type")
         } else {
-            return "Mechanical method"
+            return NSLocalizedString("Mechanical method", comment: "Mechanical method type")
         }
     }
     
@@ -74,7 +74,7 @@ struct InductionMethodDetailView: View {
                 
                 // Description
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Description")
+                    Text(NSLocalizedString("Description", comment: "Description section title"))
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                     
                     Text(method.description)
@@ -85,7 +85,7 @@ struct InductionMethodDetailView: View {
                 
                 // Indications section
                 SectionCard(
-                    title: "Indications",
+                    title: NSLocalizedString("Indications", comment: "Indications section title"),
                     items: method.indications,
                     iconName: "checkmark.circle.fill",
                     color: .green
@@ -94,7 +94,7 @@ struct InductionMethodDetailView: View {
                 
                 // Contraindications section
                 SectionCard(
-                    title: "Contraindications",
+                    title: NSLocalizedString("Contraindications", comment: "Contraindications section title"),
                     items: method.contraindications,
                     iconName: "xmark.circle.fill",
                     color: .red
@@ -103,7 +103,7 @@ struct InductionMethodDetailView: View {
                 
                 // Potential risks section
                 SectionCard(
-                    title: "Potential risks",
+                    title: NSLocalizedString("Potential risks", comment: "Potential risks section title"),
                     items: method.risks,
                     iconName: "exclamationmark.triangle.fill",
                     color: .orange
@@ -112,14 +112,14 @@ struct InductionMethodDetailView: View {
                 
                 // Additional information section
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Additional information")
+                    Text(NSLocalizedString("Additional information", comment: "Additional information section title"))
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                     
                     // Visual indicators about the method
                     HStack(spacing: 20) {
                         // Effectiveness
                         VStack(spacing: 8) {
-                            Text("Effectiveness")
+                            Text(NSLocalizedString("Effectiveness", comment: "Effectiveness rating label"))
                                 .font(.system(size: 14, design: .rounded))
                                 .foregroundColor(.secondary)
                             
@@ -129,7 +129,7 @@ struct InductionMethodDetailView: View {
                         
                         // Speed of action
                         VStack(spacing: 8) {
-                            Text("Speed")
+                            Text(NSLocalizedString("Speed", comment: "Speed rating label"))
                                 .font(.system(size: 14, design: .rounded))
                                 .foregroundColor(.secondary)
                             
@@ -139,7 +139,7 @@ struct InductionMethodDetailView: View {
                         
                         // Risk
                         VStack(spacing: 8) {
-                            Text("Risk")
+                            Text(NSLocalizedString("Risk", comment: "Risk rating label"))
                                 .font(.system(size: 14, design: .rounded))
                                 .foregroundColor(.secondary)
                             
@@ -159,12 +159,12 @@ struct InductionMethodDetailView: View {
                         Image(systemName: "info.circle.fill")
                             .foregroundColor(.blue)
                         
-                        Text("Clinical note")
+                        Text(NSLocalizedString("Clinical note", comment: "Clinical note section title"))
                             .font(.system(size: 16, weight: .semibold, design: .rounded))
                             .foregroundColor(.blue)
                     }
                     
-                    Text("The choice of method should be based on clinical judgment, considering the individual characteristics of each patient and the results of the Bishop Test.")
+                    Text(NSLocalizedString("The choice of method should be based on clinical judgment, considering the individual characteristics of each patient and the results of the Bishop Test.", comment: "Clinical note description"))
                         .font(.system(size: 14, design: .rounded))
                         .foregroundColor(.secondary)
                 }

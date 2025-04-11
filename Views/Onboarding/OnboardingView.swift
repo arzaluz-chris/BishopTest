@@ -10,20 +10,20 @@ struct OnboardingView: View {
     
     let pages = [
         OnboardingPage(
-            title: "Welcome to BishopTest",
-            subtitle: "The modern tool for labor induction assessment",
+            title: NSLocalizedString("Welcome to BishopTest", comment: "First onboarding page title"),
+            subtitle: NSLocalizedString("The modern tool for labor induction assessment", comment: "First onboarding page subtitle"),
             image: "chart.bar.doc.horizontal",
             color: BishopDesign.Colors.primary
         ),
         OnboardingPage(
-            title: "Accurate Assessment",
-            subtitle: "Evidence-based clinical tool for informed decision-making",
+            title: NSLocalizedString("Accurate Assessment", comment: "Second onboarding page title"),
+            subtitle: NSLocalizedString("Evidence-based clinical tool for informed decision-making", comment: "Second onboarding page subtitle"),
             image: "checkmark.shield",
             color: BishopDesign.Colors.favorable
         ),
         OnboardingPage(
-            title: "Clinical Decisions",
-            subtitle: "Receive personalized recommendations based on the Bishop score",
+            title: NSLocalizedString("Clinical Decisions", comment: "Third onboarding page title"),
+            subtitle: NSLocalizedString("Receive personalized recommendations based on the Bishop score", comment: "Third onboarding page subtitle"),
             image: "heart.text.square",
             color: BishopDesign.Colors.moderate
         )
@@ -47,7 +47,7 @@ struct OnboardingView: View {
                         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)) // Hide default indicator
                         .frame(height: 400)
                         
-                        // Custom pagination indicator, positioned properly below content
+                        // Custom pagination indicator
                         HStack(spacing: 8) {
                             ForEach(0..<pages.count, id: \.self) { index in
                                 Circle()
@@ -66,11 +66,11 @@ struct OnboardingView: View {
                             .frame(width: 120, height: 120)
                             .padding(.bottom, 20)
                         
-                        Text("Customize your experience")
+                        Text(NSLocalizedString("Customize your experience", comment: "Personalization page title"))
                             .font(.system(size: 28, weight: .bold, design: .rounded))
                             .multilineTextAlignment(.center)
                         
-                        Text("Help us tailor the app to your professional profile")
+                        Text(NSLocalizedString("Help us tailor the app to your professional profile", comment: "Personalization page subtitle"))
                             .font(.system(size: 17, design: .rounded))
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
@@ -80,11 +80,11 @@ struct OnboardingView: View {
                         VStack(spacing: 16) {
                             // Name field
                             VStack(alignment: .leading, spacing: 8) {
-                                Text("Name")
+                                Text(NSLocalizedString("Name", comment: "Name input label"))
                                     .font(.system(size: 15, weight: .medium, design: .rounded))
                                     .foregroundColor(.secondary)
                                 
-                                TextField("Your name", text: $name)
+                                TextField(NSLocalizedString("Your name", comment: "Name input placeholder"), text: $name)
                                     .font(.system(size: 17, design: .rounded))
                                     .padding()
                                     .background(Color(.systemGray6))
@@ -93,7 +93,7 @@ struct OnboardingView: View {
                             
                             // Specialty selector
                             VStack(alignment: .leading, spacing: 8) {
-                                Text("Medical Level")
+                                Text(NSLocalizedString("Medical Level", comment: "Medical level input label"))
                                     .font(.system(size: 15, weight: .medium, design: .rounded))
                                     .foregroundColor(.secondary)
                                 
@@ -101,7 +101,9 @@ struct OnboardingView: View {
                                     showingSpecialtyPicker = true
                                 }) {
                                     HStack {
-                                        Text(specialty.isEmpty ? "Select your medical level" : specialty)
+                                        Text(specialty.isEmpty ?
+                                            NSLocalizedString("Select your medical level", comment: "Medical level placeholder") :
+                                            specialty)
                                             .font(.system(size: 17, design: .rounded))
                                             .foregroundColor(specialty.isEmpty ? .secondary : .primary)
                                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -126,7 +128,7 @@ struct OnboardingView: View {
                 VStack {
                     if currentPage < pages.count {
                         BishopDesign.Components.PrimaryButton(
-                            title: "Continue",
+                            title: LocalizedStringKey("Continue"),
                             icon: "arrow.right",
                             action: {
                                 withAnimation {
@@ -139,13 +141,13 @@ struct OnboardingView: View {
                         Button(action: {
                             currentPage = pages.count
                         }) {
-                            Text("Skip")
+                            Text(NSLocalizedString("Skip", comment: "Skip onboarding button"))
                                 .font(.system(size: 17, weight: .medium, design: .rounded))
                                 .foregroundColor(.secondary)
                         }
                     } else {
                         BishopDesign.Components.PrimaryButton(
-                            title: "Start",
+                            title: LocalizedStringKey("Start"),
                             icon: "checkmark",
                             isDisabled: name.isEmpty || specialty.isEmpty,
                             action: {
@@ -165,7 +167,7 @@ struct OnboardingView: View {
     }
 }
 
-// Model for onboarding pages
+// Model for onboarding pages remains the same
 struct OnboardingPage {
     let title: String
     let subtitle: String

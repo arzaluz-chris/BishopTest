@@ -14,6 +14,16 @@ struct InductionMethodsView: View {
         case mechanical = "Mechanical"
         
         var id: String { self.rawValue }
+        
+        // Localized category names
+        var localizedName: String {
+            switch self {
+            case .all: return NSLocalizedString("All", comment: "All categories filter")
+            case .oxytocin: return NSLocalizedString("Oxytocin", comment: "Oxytocin category filter")
+            case .prostaglandins: return NSLocalizedString("Prostaglandins", comment: "Prostaglandins category filter")
+            case .mechanical: return NSLocalizedString("Mechanical", comment: "Mechanical category filter")
+            }
+        }
     }
     
     // Methods filtered by category and search
@@ -56,7 +66,7 @@ struct InductionMethodsView: View {
                                 Button(action: {
                                     selectedCategory = category
                                 }) {
-                                    Text(category.rawValue)
+                                    Text(category.localizedName)
                                         .font(.system(size: 14, weight: selectedCategory == category ? .semibold : .medium, design: .rounded))
                                         .padding(.horizontal, 14)
                                         .padding(.vertical, 8)
@@ -84,11 +94,11 @@ struct InductionMethodsView: View {
                                 .font(.system(size: 60))
                                 .foregroundColor(.gray.opacity(0.5))
                             
-                            Text("No methods found")
+                            Text(NSLocalizedString("No methods found", comment: "No methods found message"))
                                 .font(.system(size: 18, weight: .medium, design: .rounded))
                                 .foregroundColor(.secondary)
                             
-                            Text("Try another search or category")
+                            Text(NSLocalizedString("Try another search or category", comment: "Hint for no methods found"))
                                 .font(.system(size: 15, design: .rounded))
                                 .foregroundColor(.secondary)
                                 .multilineTextAlignment(.center)
@@ -113,8 +123,8 @@ struct InductionMethodsView: View {
                     }
                 }
             }
-            .navigationBarTitle("Induction Methods", displayMode: .inline)
-            .searchable(text: $searchText, prompt: "Search method")
+            .navigationBarTitle(NSLocalizedString("Induction Methods", comment: "Navigation bar title"), displayMode: .inline)
+            .searchable(text: $searchText, prompt: NSLocalizedString("Search method", comment: "Search bar placeholder"))
         }
     }
 }

@@ -16,6 +16,16 @@ struct HistoryView: View {
         case unfavorable = "Unfavorable"
         
         var id: String { self.rawValue }
+        
+        // Localized display name
+        var localizedName: String {
+            switch self {
+            case .all: return NSLocalizedString("All", comment: "Filter for all evaluations")
+            case .favorable: return NSLocalizedString("Favorable", comment: "Filter for favorable evaluations")
+            case .moderate: return NSLocalizedString("Moderate", comment: "Filter for moderately favorable evaluations")
+            case .unfavorable: return NSLocalizedString("Unfavorable", comment: "Filter for unfavorable evaluations")
+            }
+        }
     }
     
     // Filtered and sorted list of evaluations
@@ -53,7 +63,7 @@ struct HistoryView: View {
                                 Button(action: {
                                     selectedFilter = filter
                                 }) {
-                                    Text(filter.rawValue)
+                                    Text(filter.localizedName)
                                         .font(.system(size: 14, weight: selectedFilter == filter ? .semibold : .medium, design: .rounded))
                                         .padding(.horizontal, 14)
                                         .padding(.vertical, 8)
@@ -82,13 +92,13 @@ struct HistoryView: View {
                                 .foregroundColor(.gray.opacity(0.5))
                             
                             Text(searchText.isEmpty && selectedFilter == .all ?
-                                "No saved evaluations" :
-                                "No evaluations found")
+                                NSLocalizedString("No saved evaluations", comment: "Message when no evaluations exist") :
+                                NSLocalizedString("No evaluations found", comment: "Message when no evaluations match filter"))
                                 .font(.system(size: 18, weight: .medium, design: .rounded))
                                 .foregroundColor(.secondary)
                             
                             if searchText.isEmpty && selectedFilter == .all {
-                                Text("Your saved evaluations will appear here")
+                                Text(NSLocalizedString("Your saved evaluations will appear here", comment: "Hint for empty evaluations list"))
                                     .font(.system(size: 15, design: .rounded))
                                     .foregroundColor(.secondary)
                                     .multilineTextAlignment(.center)
@@ -97,7 +107,7 @@ struct HistoryView: View {
                                 NavigationLink(destination: BishopScoreView()) {
                                     HStack {
                                         Image(systemName: "plus.circle")
-                                        Text("New Evaluation")
+                                        Text(NSLocalizedString("New Evaluation", comment: "Button to start new evaluation"))
                                     }
                                     .font(.system(size: 16, weight: .medium, design: .rounded))
                                     .foregroundColor(BishopDesign.Colors.primary)
@@ -109,7 +119,7 @@ struct HistoryView: View {
                         }
                         .frame(maxWidth: .infinity)
                     } else {
-                        // List with swipe actions - using native SwiftUI functionality
+                        // List with swipe actions
                         List {
                             ForEach(filteredScores) { score in
                                 NavigationLink(destination: ResultView(bishopScore: score, dataStore: dataStore, isPresented: .constant(false))) {
@@ -124,7 +134,7 @@ struct HistoryView: View {
                                         scoreToDelete = score
                                         showingDeleteAlert = true
                                     } label: {
-                                        Label("Delete", systemImage: "trash")
+                                        Label(NSLocalizedString("Delete", comment: "Delete action button"), systemImage: "trash")
                                     }
                                 }
                             }
@@ -133,19 +143,19 @@ struct HistoryView: View {
                     }
                 }
             }
-            .navigationBarTitle("History", displayMode: .inline)
-            .searchable(text: $searchText, prompt: "Search patient")
+            .navigationBarTitle(NSLocalizedString("History", comment: "Navigation bar title"), displayMode: .inline)
+            .searchable(text: $searchText, prompt: NSLocalizedString("Search patient", comment: "Search bar placeholder"))
             .alert(isPresented: $showingDeleteAlert) {
                 Alert(
-                    title: Text("Delete Evaluation"),
-                    message: Text("Are you sure you want to delete this evaluation?"),
-                    primaryButton: .destructive(Text("Delete")) {
+                    title: Text(NSLocalizedString("Delete Evaluation", comment: "Delete alert title")),
+                    message: Text(NSLocalizedString("Are you sure you want to delete this evaluation?", comment: "Delete alert message")),
+                    primaryButton: .destructive(Text(NSLocalizedString("Delete", comment: "Confirm delete button"))) {
                         if let score = scoreToDelete,
                            let index = dataStore.savedScores.firstIndex(where: { $0.id == score.id }) {
                             dataStore.deleteScore(at: IndexSet([index]))
                         }
                     },
-                    secondaryButton: .cancel()
+                    secondaryButton: .cancel(Text(NSLocalizedString("Cancel", comment: "Cancel button")))
                 )
             }
         }

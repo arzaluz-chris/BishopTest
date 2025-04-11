@@ -13,16 +13,16 @@ struct HomeView: View {
                     // Header with personalized greeting
                     VStack(alignment: .leading, spacing: 8) {
                         if !userName.isEmpty {
-                            Text("Hello, \(firstName)")
+                            Text(String.localizedStringWithFormat(NSLocalizedString("Hello, %@", comment: "Personalized greeting"), firstName))
                                 .font(.system(size: 28, weight: .bold, design: .rounded))
                                 .padding(.top, 12)
                         } else {
-                            Text("Welcome")
+                            Text(NSLocalizedString("Welcome", comment: "Generic welcome message"))
                                 .font(.system(size: 28, weight: .bold, design: .rounded))
                                 .padding(.top, 12)
                         }
                         
-                        Text(!userSpecialty.isEmpty ? userSpecialty : "Bishop Test")
+                        Text(!userSpecialty.isEmpty ? userSpecialty : NSLocalizedString("Bishop Test", comment: "Default specialty text"))
                             .font(.system(size: 17, design: .rounded))
                             .foregroundColor(.secondary)
                     }
@@ -34,18 +34,18 @@ struct HomeView: View {
                         HStack(spacing: 20) {
                             // Left part with text
                             VStack(alignment: .leading, spacing: 12) {
-                                Text("Evaluation")
+                                Text(NSLocalizedString("Evaluation", comment: "Evaluation section title"))
                                     .font(.system(size: 18, weight: .semibold, design: .rounded))
                                     .foregroundColor(.white)
                                 
-                                Text("Start new Bishop test")
+                                Text(NSLocalizedString("Start new Bishop test", comment: "Start test button description"))
                                     .font(.system(size: 15, design: .rounded))
                                     .foregroundColor(.white.opacity(0.9))
                                     .multilineTextAlignment(.leading)
                                 
                                 Spacer()
                                 
-                                Text("Start")
+                                Text(NSLocalizedString("Start", comment: "Start button text"))
                                     .font(.system(size: 16, weight: .medium, design: .rounded))
                                     .padding(.horizontal, 16)
                                     .padding(.vertical, 8)
@@ -80,7 +80,7 @@ struct HomeView: View {
                     
                     // Quick access section
                     VStack(alignment: .leading, spacing: 16) {
-                        Text("Quick Access")
+                        Text(NSLocalizedString("Quick Access", comment: "Quick access section title"))
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                             .padding(.horizontal, 24)
                         
@@ -90,7 +90,7 @@ struct HomeView: View {
                             
                             // History - only show badge if there are evaluations
                             QuickAccessCard(
-                                title: "History",
+                                title: NSLocalizedString("History", comment: "History quick access title"),
                                 icon: "clock.fill",
                                 color: .purple,
                                 count: dataStore.savedScores.isEmpty ? nil : "\(dataStore.savedScores.count)",
@@ -99,7 +99,7 @@ struct HomeView: View {
                             
                             // Information
                             QuickAccessCard(
-                                title: "Information",
+                                title: NSLocalizedString("Information", comment: "Information quick access title"),
                                 icon: "info.circle.fill",
                                 color: .blue,
                                 destination: AnyView(InformationView())
@@ -107,7 +107,7 @@ struct HomeView: View {
                             
                             // Methods
                             QuickAccessCard(
-                                title: "Methods",
+                                title: NSLocalizedString("Methods", comment: "Induction methods quick access title"),
                                 icon: "list.bullet.clipboard",
                                 color: .orange,
                                 destination: AnyView(InductionMethodsView())
@@ -122,13 +122,13 @@ struct HomeView: View {
                     if !dataStore.savedScores.isEmpty {
                         VStack(alignment: .leading, spacing: 16) {
                             HStack {
-                                Text("Recent Evaluations")
+                                Text(NSLocalizedString("Recent Evaluations", comment: "Recent evaluations section title"))
                                     .font(.system(size: 20, weight: .bold, design: .rounded))
                                 
                                 Spacer()
                                 
                                 NavigationLink(destination: HistoryView()) {
-                                    Text("View All")
+                                    Text(NSLocalizedString("View All", comment: "View all evaluations button"))
                                         .font(.system(size: 16, weight: .medium, design: .rounded))
                                         .foregroundColor(BishopDesign.Colors.primary)
                                 }
@@ -152,7 +152,7 @@ struct HomeView: View {
                                 .font(.system(size: 40))
                                 .foregroundColor(.secondary.opacity(0.6))
                             
-                            Text("No saved evaluations")
+                            Text(NSLocalizedString("No saved evaluations", comment: "Message when no evaluations exist"))
                                 .font(.system(size: 17, design: .rounded))
                                 .foregroundColor(.secondary)
                         }
@@ -221,8 +221,7 @@ struct QuickAccessCard<Destination: View>: View {
     }
 }
 
-
-// Component for recent evaluation cards - Updated with blue text for patient name
+// Component for recent evaluation cards
 struct RecentScoreCard: View {
     let score: BishopScore
     
@@ -261,9 +260,9 @@ struct RecentScoreCard: View {
             
             // Middle section with patient details
             VStack(alignment: .leading, spacing: 4) {
-                Text(score.patientName ?? "Patient without name")
+                Text(score.patientName ?? NSLocalizedString("Patient without name", comment: "Default patient name"))
                     .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .foregroundColor(.blue) // Patient name in blue as shown in the image
+                    .foregroundColor(.blue)
                     .lineLimit(1)
                 
                 Text(dateFormatter.string(from: score.date))
@@ -300,11 +299,11 @@ struct RecentScoreCard: View {
     private func getInterpretationText(_ interpretation: ScoreInterpretation) -> String {
         switch interpretation {
         case .favorable:
-            return "Favorable"
+            return NSLocalizedString("Favorable", comment: "Favorable interpretation")
         case .moderatelyFavorable:
-            return "Moderate"
+            return NSLocalizedString("Moderate", comment: "Moderate interpretation")
         case .unfavorable:
-            return "Unfavorable"
+            return NSLocalizedString("Unfavorable", comment: "Unfavorable interpretation")
         }
     }
     

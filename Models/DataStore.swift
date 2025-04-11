@@ -5,7 +5,7 @@ import Combine
 class DataStore: ObservableObject {
     @Published var savedScores: [BishopScore] = []
     
-    private let savePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("BishopScores.json")
+    private let savePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(NSLocalizedString("BishopScores.json", comment: "Saved scores filename"))
     
     init() {
         loadScores()
@@ -26,7 +26,7 @@ class DataStore: ObservableObject {
             let data = try JSONEncoder().encode(savedScores)
             try data.write(to: savePath)
         } catch {
-            print("Error saving scores: \(error.localizedDescription)")
+            print(NSLocalizedString("Error saving scores: %@", comment: "Error message when saving scores"), error.localizedDescription)
         }
     }
     
@@ -37,11 +37,11 @@ class DataStore: ObservableObject {
                 let data = try Data(contentsOf: savePath)
                 savedScores = try JSONDecoder().decode([BishopScore].self, from: data)
             } catch {
-                print("Error decoding saved scores: \(error.localizedDescription)")
+                print(NSLocalizedString("Error decoding saved scores: %@", comment: "Error message when loading scores"), error.localizedDescription)
                 savedScores = []
             }
         } else {
-            print("No previously saved scores found.")
+            print(NSLocalizedString("No previously saved scores found.", comment: "Message when no saved scores exist"))
             savedScores = []
         }
     }

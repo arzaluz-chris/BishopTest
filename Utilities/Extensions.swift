@@ -1,4 +1,4 @@
-//  Extensions.swift
+// Extensions.swift
 import SwiftUI
 
 extension Color {
