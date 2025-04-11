@@ -84,40 +84,38 @@ struct HomeView: View {
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                             .padding(.horizontal, 24)
                         
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 16) {
-                                Spacer()
-                                    .frame(width: 8)
-                                
-                                // History
-                                QuickAccessCard(
-                                    title: "History",
-                                    icon: "clock.fill",
-                                    color: .purple,
-                                    count: "\(dataStore.savedScores.count)",
-                                    destination: AnyView(HistoryView())
-                                )
-                                
-                                // Information
-                                QuickAccessCard(
-                                    title: "Information",
-                                    icon: "info.circle.fill",
-                                    color: .blue,
-                                    destination: AnyView(InformationView())
-                                )
-                                
-                                // Methods
-                                QuickAccessCard(
-                                    title: "Methods",
-                                    icon: "list.bullet.clipboard",
-                                    color: .orange,
-                                    destination: AnyView(InductionMethodsView())
-                                )
-                                
-                                Spacer()
-                                    .frame(width: 8)
-                            }
+                        // Updated to properly center the cards
+                        HStack(spacing: 16) {
+                            Spacer()
+                            
+                            // History - only show badge if there are evaluations
+                            QuickAccessCard(
+                                title: "History",
+                                icon: "clock.fill",
+                                color: .purple,
+                                count: dataStore.savedScores.isEmpty ? nil : "\(dataStore.savedScores.count)",
+                                destination: AnyView(HistoryView())
+                            )
+                            
+                            // Information
+                            QuickAccessCard(
+                                title: "Information",
+                                icon: "info.circle.fill",
+                                color: .blue,
+                                destination: AnyView(InformationView())
+                            )
+                            
+                            // Methods
+                            QuickAccessCard(
+                                title: "Methods",
+                                icon: "list.bullet.clipboard",
+                                color: .orange,
+                                destination: AnyView(InductionMethodsView())
+                            )
+                            
+                            Spacer()
                         }
+                        .padding(.horizontal, 24)
                     }
                     
                     // If there are recent evaluations, show them
@@ -223,7 +221,8 @@ struct QuickAccessCard<Destination: View>: View {
     }
 }
 
-// Component for recent evaluation cards
+
+// Component for recent evaluation cards - Updated with blue text for patient name
 struct RecentScoreCard: View {
     let score: BishopScore
     
@@ -260,10 +259,11 @@ struct RecentScoreCard: View {
                     .foregroundColor(scoreColor)
             }
             
-            // Patient information
+            // Middle section with patient details
             VStack(alignment: .leading, spacing: 4) {
                 Text(score.patientName ?? "Patient without name")
                     .font(.system(size: 17, weight: .medium, design: .rounded))
+                    .foregroundColor(.blue) // Patient name in blue as shown in the image
                     .lineLimit(1)
                 
                 Text(dateFormatter.string(from: score.date))
@@ -273,17 +273,49 @@ struct RecentScoreCard: View {
             
             Spacer()
             
-            // Interpretation label
-            Text(score.interpretation.rawValue.components(separatedBy: " ").last ?? "")
-                .font(.system(size: 13, weight: .medium, design: .rounded))
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(scoreColor.opacity(0.15))
-                .foregroundColor(scoreColor)
-                .cornerRadius(12)
+            // Interpretation badge
+            HStack(spacing: 4) {
+                let interpretationText = getInterpretationText(score.interpretation)
+                let interpretationIcon = getInterpretationIcon(score.interpretation)
+                
+                Image(systemName: interpretationIcon)
+                    .font(.system(size: 12))
+                
+                Text(interpretationText)
+                    .font(.system(size: 13, weight: .medium, design: .rounded))
+                    .lineLimit(1)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(scoreColor.opacity(0.15))
+            .foregroundColor(scoreColor)
+            .cornerRadius(16)
         }
         .padding(16)
         .background(BishopDesign.Colors.cardBackground)
         .cornerRadius(16)
+    }
+    
+    // Helper functions to get interpretation text and icon
+    private func getInterpretationText(_ interpretation: ScoreInterpretation) -> String {
+        switch interpretation {
+        case .favorable:
+            return "Favorable"
+        case .moderatelyFavorable:
+            return "Moderate"
+        case .unfavorable:
+            return "Unfavorable"
+        }
+    }
+    
+    private func getInterpretationIcon(_ interpretation: ScoreInterpretation) -> String {
+        switch interpretation {
+        case .favorable:
+            return "checkmark.circle.fill"
+        case .moderatelyFavorable:
+            return "arrow.up.right.circle.fill"
+        case .unfavorable:
+            return "exclamationmark.circle.fill"
+        }
     }
 }

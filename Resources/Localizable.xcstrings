@@ -54,6 +54,7 @@
       }
     },
     "%lld years • %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -70,6 +71,7 @@
       }
     },
     "•" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1119,6 +1121,7 @@
       }
     },
     "Favorable" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1464,6 +1467,9 @@
         }
       }
     },
+    "Medical Level" : {
+
+    },
     "Medical Professional" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1482,6 +1488,7 @@
       }
     },
     "Medical Specialty" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1549,6 +1556,7 @@
       }
     },
     "Moderate" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2728,6 +2736,7 @@
       }
     },
     "Unfavorable" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2761,6 +2770,7 @@
       }
     },
     "Unnamed patient" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

@@ -36,15 +36,27 @@ struct OnboardingView: View {
             VStack(spacing: 0) {
                 // Pagination
                 if currentPage < pages.count {
-                    TabView(selection: $currentPage) {
-                        ForEach(0..<pages.count, id: \.self) { index in
-                            OnboardingPageView(page: pages[index])
-                                .tag(index)
+                    // Content with TabView
+                    VStack {
+                        TabView(selection: $currentPage) {
+                            ForEach(0..<pages.count, id: \.self) { index in
+                                OnboardingPageView(page: pages[index])
+                                    .tag(index)
+                            }
                         }
+                        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)) // Hide default indicator
+                        .frame(height: 400)
+                        
+                        // Custom pagination indicator, positioned properly below content
+                        HStack(spacing: 8) {
+                            ForEach(0..<pages.count, id: \.self) { index in
+                                Circle()
+                                    .fill(currentPage == index ? BishopDesign.Colors.primary : Color.gray.opacity(0.3))
+                                    .frame(width: 8, height: 8)
+                            }
+                        }
+                        .padding(.top, 10)
                     }
-                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-                    .frame(height: 400)
                 } else {
                     // Personal information page
                     VStack(spacing: BishopDesign.Layout.contentSpacing) {
@@ -81,7 +93,7 @@ struct OnboardingView: View {
                             
                             // Specialty selector
                             VStack(alignment: .leading, spacing: 8) {
-                                Text("Medical Specialty")
+                                Text("Medical Level")
                                     .font(.system(size: 15, weight: .medium, design: .rounded))
                                     .foregroundColor(.secondary)
                                 
@@ -89,7 +101,7 @@ struct OnboardingView: View {
                                     showingSpecialtyPicker = true
                                 }) {
                                     HStack {
-                                        Text(specialty.isEmpty ? "Select your specialty" : specialty)
+                                        Text(specialty.isEmpty ? "Select your medical level" : specialty)
                                             .font(.system(size: 17, design: .rounded))
                                             .foregroundColor(specialty.isEmpty ? .secondary : .primary)
                                             .frame(maxWidth: .infinity, alignment: .leading)

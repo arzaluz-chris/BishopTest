@@ -36,7 +36,7 @@ struct SettingsView: View {
                                 Text(userName.isEmpty ? "Medical Professional" : userName)
                                     .font(.system(size: 20, weight: .bold, design: .rounded))
                                 
-                                Text(userSpecialty.isEmpty ? "Specialty not specified" : userSpecialty)
+                                Text(userSpecialty.isEmpty ? "Medical level not specified" : userSpecialty)
                                     .font(.system(size: 16, design: .rounded))
                                     .foregroundColor(.secondary)
                             }
@@ -309,7 +309,24 @@ struct SettingsView: View {
     
     // Toggle appearance mode
     private func setAppearance(darkMode: Bool) {
-        UIApplication.shared.windows.first?.overrideUserInterfaceStyle = darkMode ? .dark : .light
+        // Updated method for iOS 15+
+        if #available(iOS 15.0, *) {
+            // Get all application scenes
+            for scene in UIApplication.shared.connectedScenes {
+                if let windowScene = scene as? UIWindowScene {
+                    // Apply the theme to all windows of each scene
+                    for window in windowScene.windows {
+                        window.overrideUserInterfaceStyle = darkMode ? .dark : .light
+                    }
+                }
+            }
+        } else {
+            // Fallback for iOS 14 and earlier versions
+            #if swift(>=5.1)
+            // This code uses a deprecated API but is necessary for iOS 14
+            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = darkMode ? .dark : .light
+            #endif
+        }
     }
     
     // Reset values

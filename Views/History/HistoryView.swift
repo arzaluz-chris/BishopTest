@@ -4,9 +4,8 @@ import SwiftUI
 struct HistoryView: View {
     @EnvironmentObject var dataStore: DataStore
     @State private var showingDeleteAlert = false
-    @State private var indexSetToDelete: IndexSet?
+    @State private var scoreToDelete: BishopScore?
     @State private var searchText = ""
-    @State private var showFilterSheet = false
     @State private var selectedFilter: ScoreFilter = .all
     
     // Available filters for evaluations
@@ -18,14 +17,6 @@ struct HistoryView: View {
         
         var id: String { self.rawValue }
     }
-    
-    // Formatter to display dates
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter
-    }()
     
     // Filtered and sorted list of evaluations
     private var filteredScores: [BishopScore] {
@@ -118,26 +109,27 @@ struct HistoryView: View {
                         }
                         .frame(maxWidth: .infinity)
                     } else {
-                        // List of evaluations
-                        ScrollView {
-                            LazyVStack(spacing: 16) {
-                                ForEach(filteredScores) { score in
-                                    HistoryScoreCard(score: score)
-                                        .contextMenu {
-                                            Button(role: .destructive, action: {
-                                                if let index = dataStore.savedScores.firstIndex(where: { $0.id == score.id }) {
-                                                    indexSetToDelete = IndexSet([index])
-                                                    showingDeleteAlert = true
-                                                }
-                                            }) {
-                                                Label("Delete", systemImage: "trash")
-                                            }
-                                        }
+                        // List with swipe actions - using native SwiftUI functionality
+                        List {
+                            ForEach(filteredScores) { score in
+                                NavigationLink(destination: ResultView(bishopScore: score, dataStore: dataStore, isPresented: .constant(false))) {
+                                    RecentScoreCard(score: score)
+                                        .padding(.vertical, 5)
+                                }
+                                .listRowInsets(EdgeInsets())
+                                .listRowBackground(Color.clear)
+                                .listRowSeparator(.hidden)
+                                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                    Button(role: .destructive) {
+                                        scoreToDelete = score
+                                        showingDeleteAlert = true
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
                                 }
                             }
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 16)
                         }
+                        .listStyle(PlainListStyle())
                     }
                 }
             }
@@ -148,169 +140,14 @@ struct HistoryView: View {
                     title: Text("Delete Evaluation"),
                     message: Text("Are you sure you want to delete this evaluation?"),
                     primaryButton: .destructive(Text("Delete")) {
-                        if let indexSet = indexSetToDelete {
-                            dataStore.deleteScore(at: indexSet)
+                        if let score = scoreToDelete,
+                           let index = dataStore.savedScores.firstIndex(where: { $0.id == score.id }) {
+                            dataStore.deleteScore(at: IndexSet([index]))
                         }
                     },
                     secondaryButton: .cancel()
                 )
             }
-        }
-    }
-}
-
-// Card for each evaluation in the history
-struct HistoryScoreCard: View {
-    let score: BishopScore
-    @EnvironmentObject var dataStore: DataStore
-    
-    // Formatter to display the date
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        return formatter
-    }()
-    
-    // Formatter to display the time
-    private let timeFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .none
-        formatter.timeStyle = .short
-        return formatter
-    }()
-    
-    // Color based on interpretation
-    private var scoreColor: Color {
-        switch score.interpretation {
-        case .favorable:
-            return BishopDesign.Colors.favorable
-        case .moderatelyFavorable:
-            return BishopDesign.Colors.moderate
-        case .unfavorable:
-            return BishopDesign.Colors.unfavorable
-        }
-    }
-    
-    var body: some View {
-        NavigationLink(destination: ResultView(bishopScore: score, dataStore: dataStore, isPresented: .constant(false))) {
-            HStack(spacing: 16) {
-                // Badge with score
-                ZStack {
-                    Circle()
-                        .fill(scoreColor.opacity(0.15))
-                        .frame(width: 56, height: 56)
-                    
-                    Circle()
-                        .stroke(scoreColor, lineWidth: 2)
-                        .frame(width: 56, height: 56)
-                    
-                    Text("\(score.totalScore)")
-                        .font(.system(size: 22, weight: .bold, design: .rounded))
-                        .foregroundColor(scoreColor)
-                }
-                
-                // Patient information and date
-                VStack(alignment: .leading, spacing: 4) {
-                    if let name = score.patientName, !name.isEmpty {
-                        Text(name)
-                            .font(.system(size: 17, weight: .semibold, design: .rounded))
-                            .lineLimit(1)
-                    } else {
-                        Text("Unnamed patient")
-                            .font(.system(size: 17, weight: .semibold, design: .rounded))
-                            .foregroundColor(.secondary)
-                            .lineLimit(1)
-                    }
-                    
-                    HStack(spacing: 8) {
-                        // Date
-                        Label(dateFormatter.string(from: score.date), systemImage: "calendar")
-                            .font(.system(size: 14, design: .rounded))
-                            .foregroundColor(.secondary)
-                        
-                        // Small separator
-                        Text("•")
-                            .font(.system(size: 12))
-                            .foregroundColor(.secondary)
-                        
-                        // Time
-                        Text(timeFormatter.string(from: score.date))
-                            .font(.system(size: 14, design: .rounded))
-                            .foregroundColor(.secondary)
-                    }
-                    
-                    // Additional information
-                    if let age = score.patientAge {
-                        Text("\(age) years • \(score.nulliparous ? "Nulliparous" : "Multiparous")")
-                            .font(.system(size: 14, design: .rounded))
-                            .foregroundColor(.secondary)
-                    }
-                }
-                
-                Spacer()
-                
-                // Interpretation label with distinctive style
-                VStack(alignment: .trailing, spacing: 4) {
-                    // Type label
-                    getInterpretationBadge()
-                    
-                    // Arrow to indicate navigation
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 14))
-                        .foregroundColor(.secondary)
-                        .padding(.trailing, 4)
-                }
-            }
-            .padding(16)
-            .background(Color(.systemBackground))
-            .cornerRadius(16)
-            .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
-        }
-    }
-    
-    // Badge to show the type of interpretation
-    @ViewBuilder
-    private func getInterpretationBadge() -> some View {
-        switch score.interpretation {
-        case .favorable:
-            HStack(spacing: 4) {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.system(size: 12))
-                Text("Favorable")
-                    .font(.system(size: 12, weight: .semibold, design: .rounded))
-            }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
-            .background(BishopDesign.Colors.favorable.opacity(0.15))
-            .foregroundColor(BishopDesign.Colors.favorable)
-            .cornerRadius(12)
-            
-        case .moderatelyFavorable:
-            HStack(spacing: 4) {
-                Image(systemName: "arrow.up.right.circle.fill")
-                    .font(.system(size: 12))
-                Text("Moderate")
-                    .font(.system(size: 12, weight: .semibold, design: .rounded))
-            }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
-            .background(BishopDesign.Colors.moderate.opacity(0.15))
-            .foregroundColor(BishopDesign.Colors.moderate)
-            .cornerRadius(12)
-            
-        case .unfavorable:
-            HStack(spacing: 4) {
-                Image(systemName: "exclamationmark.circle.fill")
-                    .font(.system(size: 12))
-                Text("Unfavorable")
-                    .font(.system(size: 12, weight: .semibold, design: .rounded))
-            }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
-            .background(BishopDesign.Colors.unfavorable.opacity(0.15))
-            .foregroundColor(BishopDesign.Colors.unfavorable)
-            .cornerRadius(12)
         }
     }
 }
