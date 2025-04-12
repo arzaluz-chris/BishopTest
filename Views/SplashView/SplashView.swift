@@ -1,11 +1,11 @@
-//SplashView.swift
+// SplashView.swift
 import SwiftUI
 
 struct SplashView: View {
     @State private var isActive = false
     @State private var size = 0.8
     @State private var opacity = 0.5
-    @State private var rotation = 0.0
+    // Eliminada la línea: @State private var rotation = 0.0
     @State private var isLogoVisible = false
     @State private var isTextVisible = false
     
@@ -39,10 +39,10 @@ struct SplashView: View {
                         .frame(width: 110, height: 110)
                         .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
                         .overlay(
-                            Image(systemName: "stethoscope")
+                            Image("bishop_score_icon")
                                 .font(.system(size: 50))
                                 .foregroundColor(BishopDesign.Colors.primary)
-                                .rotationEffect(.degrees(rotation))
+                                // Eliminada la línea: .rotationEffect(.degrees(rotation))
                         )
                         .scaleEffect(isLogoVisible ? 1.0 : 0.6)
                         .opacity(isLogoVisible ? 1.0 : 0.0)
@@ -52,22 +52,22 @@ struct SplashView: View {
                         isLogoVisible = true
                     }
                     
-                    // Small rotation of the icon
-                    withAnimation(
-                        Animation.easeInOut(duration: 1.2)
-                            .delay(0.4)
-                    ) {
-                        rotation = 20
-                    }
+                    // Eliminado el bloque de animación de rotación:
+                    // withAnimation(
+                    //     Animation.easeInOut(duration: 1.2)
+                    //         .delay(0.4)
+                    // ) {
+                    //     rotation = 20
+                    // }
                 }
                 
                 // App text
                 VStack(spacing: 10) {
-                    Text("BishopTest")
+                    Text(NSLocalizedString("BishopTest", comment: "App name in splash screen"))
                         .font(.system(size: 36, weight: .bold, design: .rounded))
                         .foregroundColor(.white)
                     
-                    Text("Precise obstetric evaluation")
+                    Text(NSLocalizedString("Precise obstetric evaluation", comment: "App tagline in splash screen"))
                         .font(.system(size: 18, weight: .medium, design: .rounded))
                         .foregroundColor(.white.opacity(0.8))
                 }

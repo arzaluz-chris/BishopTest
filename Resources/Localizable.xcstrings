@@ -5,15 +5,58 @@
 
     },
     "-1/0" : {
-      "comment" : "Station value"
+      "comment" : "Station value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-1/0"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-1/0"
+          }
+        }
+      }
     },
     "-2" : {
-      "comment" : "Station value"
+      "comment" : "Station value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-2"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-2"
+          }
+        }
+      }
     },
     "-3" : {
-      "comment" : "Station value"
+      "comment" : "Station value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-3"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-3"
+          }
+        }
+      }
     },
     "**Add 1 point for:**\n• Preeclampsia\n• Each previous vaginal delivery\n\n**Subtract 1 point for:**\n• Post-term pregnancy\n• Nulliparity\n• Premature rupture of membranes" : {
+      "comment" : "Score modifiers description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -29,25 +72,22 @@
         }
       }
     },
-    "%@ years" : {
-      "extractionState" : "stale",
+    "%d years" : {
+      "comment" : "Age in years",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ years"
+            "value" : "%d years"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ años"
+            "value" : "%d años"
           }
         }
       }
-    },
-    "%d years" : {
-      "comment" : "Age in years"
     },
     "%lld" : {
       "localizations" : {
@@ -65,41 +105,8 @@
         }
       }
     },
-    "%lld years • %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld years • %2$@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld años • %2$@"
-          }
-        }
-      }
-    },
-    "•" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "•"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "•"
-          }
-        }
-      }
-    },
     "• **Score ≥ 8:** Induction with oxytocin, consider amniotomy\n• **Score 6-7:** In multiparous women, oxytocin. In nulliparous women, evaluate cervical ripening\n• **Score ≤ 5:** Cervical ripening with prostaglandins or mechanical methods" : {
+      "comment" : "Guidelines based on score",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -116,6 +123,7 @@
       }
     },
     "• Assess the state of the cervix before induction\n• Estimate the probability of success in induction\n• Determine the need for cervical ripening beforehand\n• Help choose the most appropriate method of induction" : {
+      "comment" : "Clinical utility points",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -132,6 +140,7 @@
       }
     },
     "• Chronologically prolonged gestation (>41.0 weeks)\n• Maternal pathologies (Preeclampsia, Diabetes)\n• Fetal indications (IUGR, intrauterine fetal demise)\n• Obstetric causes (PROM, EVP)" : {
+      "comment" : "Indications for induction",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -164,36 +173,76 @@
         }
       }
     },
-    "+%lld" : {
-      "extractionState" : "stale",
+    "+1/+2" : {
+      "comment" : "Station value",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "+%lld"
+            "value" : "+1/+2"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "+%lld"
+            "value" : "+1/+2"
           }
         }
       }
     },
-    "+1/+2" : {
-      "comment" : "Station value"
-    },
     "≥5 cm" : {
-      "comment" : "Dilation value"
+      "comment" : "Dilation value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≥5 cm"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≥5 cm"
+          }
+        }
+      }
     },
     "≥80%" : {
-      "comment" : "Effacement value"
+      "comment" : "Effacement value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≥80%"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≥80%"
+          }
+        }
+      }
     },
     "0 cm" : {
-      "comment" : "Dilation value"
+      "comment" : "Dilation value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0 cm"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0 cm"
+          }
+        }
+      }
     },
     "0 points" : {
+      "comment" : "Score column header",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -210,9 +259,24 @@
       }
     },
     "0-30%" : {
-      "comment" : "Effacement value"
+      "comment" : "Effacement value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0-30%"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0-30%"
+          }
+        }
+      }
     },
     "1 point" : {
+      "comment" : "Score column header",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -229,7 +293,21 @@
       }
     },
     "1-2 cm" : {
-      "comment" : "Dilation value"
+      "comment" : "Dilation value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1-2 cm"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1-2 cm"
+          }
+        }
+      }
     },
     "1.0.0" : {
       "comment" : "App version",
@@ -249,6 +327,7 @@
       }
     },
     "2 points" : {
+      "comment" : "Score column header",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -265,6 +344,7 @@
       }
     },
     "3 points" : {
+      "comment" : "Score column header",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -281,47 +361,55 @@
       }
     },
     "3-4 cm" : {
-      "comment" : "Dilation value"
-    },
-    "14" : {
-      "extractionState" : "stale",
+      "comment" : "Dilation value",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "14"
+            "value" : "3-4 cm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "14"
+            "value" : "3-4 cm"
           }
         }
       }
     },
     "40-50%" : {
-      "comment" : "Effacement value"
-    },
-    "60" : {
-      "extractionState" : "stale",
+      "comment" : "Effacement value",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60"
+            "value" : "40-50%"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60"
+            "value" : "40-50%"
           }
         }
       }
     },
     "60-70%" : {
-      "comment" : "Effacement value"
+      "comment" : "Effacement value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "60-70%"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "60-70%"
+          }
+        }
+      }
     },
     "A score between 6-7 indicates moderate conditions for induction, especially in multiparous women." : {
       "comment" : "Moderately favorable cervix description",
@@ -375,6 +463,7 @@
       }
     },
     "About" : {
+      "comment" : "About section title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -408,7 +497,21 @@
       }
     },
     "Active maternal infections" : {
-      "comment" : "Mechanical method contraindication"
+      "comment" : "Mechanical method contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active maternal infections"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infección materna activa"
+          }
+        }
+      }
     },
     "Additional information" : {
       "comment" : "Additional information section title",
@@ -462,6 +565,7 @@
       }
     },
     "An adequate score allows:\n• Reduce unnecessary cesareans\n• Optimize induction outcomes\n• Decrease maternal and fetal complications\n• Improve the birth experience" : {
+      "comment" : "Importance points",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -495,6 +599,7 @@
       }
     },
     "App Preferences" : {
+      "comment" : "Settings section title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -510,25 +615,8 @@
         }
       }
     },
-    "Applied Modifiers" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Applied Modifiers"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modificadores aplicados"
-          }
-        }
-      }
-    },
     "Apply score adjustments based on clinical factors" : {
-      "extractionState" : "stale",
+      "comment" : "Description for test modifiers toggle",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -562,6 +650,7 @@
       }
     },
     "Are you sure you want to reset all settings to their default values?" : {
+      "comment" : "Reset confirmation message",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -578,12 +667,41 @@
       }
     },
     "Bishop Score < 6" : {
-      "comment" : "Dinoprostone indication\nMechanical method indication\nMisoprostol indication"
+      "comment" : "Dinoprostone indication\nMechanical method indication\nMisoprostol indication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bishop Score < 6"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puntaje de Bishop < 6"
+          }
+        }
+      }
     },
     "Bishop Score ≥ 6" : {
-      "comment" : "Oxytocin indication"
+      "comment" : "Oxytocin indication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bishop Score ≥ 6"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puntaje de Bishop ≥ 6"
+          }
+        }
+      }
     },
     "Bishop Score on Wikipedia" : {
+      "comment" : "Wikipedia link description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -600,7 +718,7 @@
       }
     },
     "Bishop Score Test" : {
-      "comment" : "Main title of Bishop Score Test",
+      "comment" : "Main title of Bishop Score Test\nTitle for information view",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -617,13 +735,41 @@
       }
     },
     "Bishop Test" : {
-      "comment" : "Default specialty text"
+      "comment" : "Default specialty text",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bishop Test"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bishop Test"
+          }
+        }
+      }
     },
     "BishopScores.json" : {
-      "comment" : "Saved scores filename"
+      "comment" : "Saved scores filename",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BishopScores.json"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BishopScores.json"
+          }
+        }
+      }
     },
     "BishopTest" : {
-      "comment" : "App name",
+      "comment" : "App name\nApp name in splash screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -640,7 +786,21 @@
       }
     },
     "Body Text" : {
-      "comment" : "Generic body text"
+      "comment" : "Generic body text",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Body Text"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Body text"
+          }
+        }
+      }
     },
     "Calculate Score" : {
       "localizations" : {
@@ -676,9 +836,24 @@
       }
     },
     "Caption" : {
-      "comment" : "Generic caption text"
+      "comment" : "Generic caption text",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caption"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caption"
+          }
+        }
+      }
     },
     "Cervical Assessment" : {
+      "comment" : "Card title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -695,6 +870,7 @@
       }
     },
     "Cervical assessment should be performed via vaginal examination by a trained professional. It is recommended that serial evaluations be conducted by the same examiner for greater consistency in results." : {
+      "comment" : "Cervical assessment description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -711,7 +887,7 @@
       }
     },
     "Change the visual appearance of the app" : {
-      "extractionState" : "stale",
+      "comment" : "Description for dark mode toggle",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -762,6 +938,7 @@
       }
     },
     "Clinical Note" : {
+      "comment" : "Clinical note header",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -778,6 +955,7 @@
       }
     },
     "Clinical Utility" : {
+      "comment" : "Card title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -879,7 +1057,7 @@
       }
     },
     "Consistency" : {
-      "comment" : "Parameter name for consistency",
+      "comment" : "Parameter name\nParameter name for consistency",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -946,7 +1124,21 @@
       }
     },
     "Cord prolapse" : {
-      "comment" : "Oxytocin contraindication"
+      "comment" : "Oxytocin contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cord prolapse"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prolapso de cordón"
+          }
+        }
+      }
     },
     "Customize your experience" : {
       "comment" : "Personalization page title",
@@ -966,7 +1158,7 @@
       }
     },
     "Dark Mode" : {
-      "extractionState" : "stale",
+      "comment" : "Toggle for dark mode",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1051,7 +1243,7 @@
       }
     },
     "Dilation" : {
-      "comment" : "Parameter name for dilation",
+      "comment" : "Parameter name\nParameter name for dilation",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1068,15 +1260,58 @@
       }
     },
     "Dinoprostone" : {
-      "comment" : "Induction method name"
+      "comment" : "Induction method name",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinoprostone"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinoprostona"
+          }
+        }
+      }
     },
     "Discomfort during placement" : {
-      "comment" : "Mechanical method risk"
+      "comment" : "Mechanical method risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discomfort during placement"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Molestias durante la colocación"
+          }
+        }
+      }
     },
     "Double balloon catheter" : {
-      "comment" : "Induction method name"
+      "comment" : "Induction method name",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double balloon catheter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catéter con doble balón"
+          }
+        }
+      }
     },
     "Dr. Edward Bishop developed this scoring system in 1964 to evaluate the inducibility of the cervix. It originally included only 5 components, but subsequently, modifiers have been added to improve its predictive accuracy." : {
+      "comment" : "History description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1093,6 +1328,7 @@
       }
     },
     "Edit Information" : {
+      "comment" : "Edit profile button",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1109,7 +1345,7 @@
       }
     },
     "Effacement" : {
-      "comment" : "Parameter name for effacement",
+      "comment" : "Parameter name\nParameter name for effacement",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1143,10 +1379,38 @@
       }
     },
     "Error decoding saved scores: %@" : {
-      "comment" : "Error message when loading scores"
+      "comment" : "Error message when loading scores",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error decoding saved scores: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error al obtener los registros guardados: %@"
+          }
+        }
+      }
     },
     "Error saving scores: %@" : {
-      "comment" : "Error message when saving scores"
+      "comment" : "Error message when saving scores",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error saving scores: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eror al guardar los registros: %@"
+          }
+        }
+      }
     },
     "Evaluate the need for prostaglandins" : {
       "comment" : "Moderately favorable recommendation for nulliparous\nRecommendation for moderately favorable cervix in nulliparous",
@@ -1166,6 +1430,7 @@
       }
     },
     "Evaluated Parameters" : {
+      "comment" : "Parameters section title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1233,10 +1498,24 @@
       }
     },
     "Favorable cervix" : {
-      "comment" : "Oxytocin indication"
+      "comment" : "Oxytocin indication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorable cervix"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cérvix favorable"
+          }
+        }
+      }
     },
     "Favorable Cervix" : {
-      "extractionState" : "stale",
+      "comment" : "Interpretation category",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1253,7 +1532,21 @@
       }
     },
     "FHR abnormalities" : {
-      "comment" : "Oxytocin risk"
+      "comment" : "Oxytocin risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FHR abnormalities"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anormalidades en la frecuencia cardíaca feta"
+          }
+        }
+      }
     },
     "Firm" : {
       "comment" : "Consistency value",
@@ -1273,12 +1566,41 @@
       }
     },
     "General Practitioner" : {
-      "comment" : "Medical level"
+      "comment" : "Medical level",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General Practitioner"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Médico General"
+          }
+        }
+      }
     },
     "Grand multiparity (≥6 births)" : {
-      "comment" : "Dinoprostone contraindication"
+      "comment" : "Dinoprostone contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grand multiparity (≥6 births)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gran multiparidad (≥6 births)"
+          }
+        }
+      }
     },
     "Guidelines Based on Score" : {
+      "comment" : "Card title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1295,7 +1617,21 @@
       }
     },
     "Heading" : {
-      "comment" : "Generic heading"
+      "comment" : "Generic heading",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heading"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heading"
+          }
+        }
+      }
     },
     "Hello, %@" : {
       "comment" : "Personalized greeting",
@@ -1332,7 +1668,7 @@
       }
     },
     "High probability of success in induction, comparable to spontaneous labor. No cervical ripening is required." : {
-      "extractionState" : "stale",
+      "comment" : "Favorable description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1349,10 +1685,24 @@
       }
     },
     "High risk of hyperstimulation" : {
-      "comment" : "Mechanical method indication"
+      "comment" : "Mechanical method indication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "High risk of hyperstimulation"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alto riesgo de hiperestimulación"
+          }
+        }
+      }
     },
     "History" : {
-      "comment" : "History quick access title\nNavigation bar title",
+      "comment" : "Card title\nHistory quick access title\nHistory tab title\nNavigation bar title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1369,7 +1719,7 @@
       }
     },
     "Home" : {
-      "extractionState" : "stale",
+      "comment" : "Home tab title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1386,9 +1736,24 @@
       }
     },
     "Hypersensitivity to prostaglandins" : {
-      "comment" : "Dinoprostone contraindication\nMisoprostol contraindication"
+      "comment" : "Dinoprostone contraindication\nMisoprostol contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hypersensitivity to prostaglandins"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hipersensibilidad a las prostaglandinas"
+          }
+        }
+      }
     },
     "Importance" : {
+      "comment" : "Card title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1456,6 +1821,7 @@
       }
     },
     "Indications for Induction" : {
+      "comment" : "Card title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1489,7 +1855,7 @@
       }
     },
     "Induction possible, especially in multiparous women. In nulliparous women, consider cervical ripening based on clinical judgment." : {
-      "extractionState" : "stale",
+      "comment" : "Moderately favorable description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1523,7 +1889,7 @@
       }
     },
     "Information" : {
-      "comment" : "Information quick access title",
+      "comment" : "Information quick access title\nNavigation bar title\nTab title for information",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1540,6 +1906,7 @@
       }
     },
     "Interpretation" : {
+      "comment" : "Tab title for interpretation",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1556,6 +1923,7 @@
       }
     },
     "Interpretation of Results" : {
+      "comment" : "Interpretation section title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1571,8 +1939,11 @@
         }
       }
     },
+    "Key" : {
+      "extractionState" : "manual"
+    },
     "Low probability of success in direct induction. Cervical ripening with pharmacological or mechanical methods is recommended." : {
-      "extractionState" : "stale",
+      "comment" : "Unfavorable description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1589,28 +1960,143 @@
       }
     },
     "Low risk of hyperstimulation" : {
-      "comment" : "Misoprostol indication"
+      "comment" : "Misoprostol indication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Low risk of hyperstimulation"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bajo riesgo de hiperestimulación"
+          }
+        }
+      }
     },
     "Lower risk of uterine hyperstimulation" : {
-      "comment" : "Mechanical method risk"
+      "comment" : "Mechanical method risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lower risk of uterine hyperstimulation"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bajo riesgo de hiperestimulación uterina"
+          }
+        }
+      }
     },
     "Marginal placenta" : {
-      "comment" : "Mechanical method contraindication"
+      "comment" : "Mechanical method contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marginal placenta"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placenta parginal"
+          }
+        }
+      }
     },
     "Mechanical" : {
-      "comment" : "Mechanical category filter"
+      "comment" : "Mechanical category filter",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mechanical"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mecánico"
+          }
+        }
+      }
     },
     "Mechanical double balloon device that promotes cervical dilation." : {
-      "comment" : "Mechanical method description"
+      "comment" : "Mechanical method description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mechanical double balloon device that promotes cervical dilation."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dispositivo mecánico de doble balón que favorece la dilatación cervical."
+          }
+        }
+      }
     },
     "Mechanical method" : {
-      "comment" : "Mechanical method type"
+      "comment" : "Mechanical method type",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mechanical method"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Método mecánico"
+          }
+        }
+      }
     },
     "Medical Level" : {
-      "comment" : "Category name for medical levels\nMedical level input label"
+      "comment" : "Category name for medical levels\nMedical level input label",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medical Level"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nivel Médico"
+          }
+        }
+      }
+    },
+    "Medical level not specified" : {
+      "comment" : "Default specialty text",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medical level not specified"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nivel Médico no especificado"
+          }
+        }
+      }
     },
     "Medical Professional" : {
-      "extractionState" : "stale",
+      "comment" : "Default user title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1622,23 +2108,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profesional Médico"
-          }
-        }
-      }
-    },
-    "Medical Specialty" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Medical Specialty"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Especialidad Médica"
           }
         }
       }
@@ -1661,7 +2130,7 @@
       }
     },
     "Methods" : {
-      "comment" : "Induction methods quick access title",
+      "comment" : "Induction methods quick access title\nMethods tab title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1695,10 +2164,38 @@
       }
     },
     "Mild bleeding" : {
-      "comment" : "Mechanical method risk"
+      "comment" : "Mechanical method risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mild bleeding"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sangrado moderado"
+          }
+        }
+      }
     },
     "Misoprostol" : {
-      "comment" : "Induction method name"
+      "comment" : "Induction method name",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Misoprostol"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Misoprostol"
+          }
+        }
+      }
     },
     "Moderate" : {
       "comment" : "Filter for moderately favorable evaluations\nModerate interpretation",
@@ -1718,7 +2215,7 @@
       }
     },
     "Moderately Favorable Cervix" : {
-      "extractionState" : "stale",
+      "comment" : "Interpretation category",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1752,6 +2249,7 @@
       }
     },
     "More information" : {
+      "comment" : "More info button",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1763,23 +2261,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más información"
-          }
-        }
-      }
-    },
-    "Multiparous" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Multiparous"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Multípara"
           }
         }
       }
@@ -1887,7 +2368,21 @@
       }
     },
     "No previously saved scores found." : {
-      "comment" : "Message when no saved scores exist"
+      "comment" : "Message when no saved scores exist",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No previously saved scores found."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontraron evaluaciones previas guardadas."
+          }
+        }
+      }
     },
     "No saved evaluations" : {
       "comment" : "Message when no evaluations exist",
@@ -1906,42 +2401,22 @@
         }
       }
     },
-    "Nulliparity" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nulliparity"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nuliparidad"
-          }
-        }
-      }
-    },
-    "Nulliparous" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nulliparous"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nulípara"
-          }
-        }
-      }
-    },
     "Nurse" : {
-      "comment" : "Medical level"
+      "comment" : "Medical level",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nurse"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enfermero"
+          }
+        }
+      }
     },
     "OK" : {
       "localizations" : {
@@ -1960,9 +2435,24 @@
       }
     },
     "Oxytocin" : {
-      "comment" : "Induction method name\nOxytocin category filter\nOxytocin method type"
+      "comment" : "Induction method name\nOxytocin category filter\nOxytocin method type",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oxytocin"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oxitocina"
+          }
+        }
+      }
     },
     "Parameter" : {
+      "comment" : "Parameter column header",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1979,6 +2469,7 @@
       }
     },
     "Parameters" : {
+      "comment" : "Tab title for parameters",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2080,10 +2571,38 @@
       }
     },
     "Pharmacological cervical ripening with prostaglandins" : {
-      "comment" : "Recommendation for unfavorable cervix"
+      "comment" : "Recommendation for unfavorable cervix",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pharmacological cervical ripening with prostaglandins"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dilatación cervical farmacológica con prostaglandinas"
+          }
+        }
+      }
     },
     "Placenta previa" : {
-      "comment" : "Oxytocin contraindication"
+      "comment" : "Oxytocin contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placenta previa"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placenta previa"
+          }
+        }
+      }
     },
     "points" : {
       "comment" : "Score points label",
@@ -2103,7 +2622,7 @@
       }
     },
     "Position" : {
-      "comment" : "Parameter name for position",
+      "comment" : "Parameter name\nParameter name for position",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2171,6 +2690,7 @@
       }
     },
     "Precise obstetric evaluation" : {
+      "comment" : "App tagline in splash screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2238,42 +2758,123 @@
       }
     },
     "Previous cesarean section" : {
-      "comment" : "Dinoprostone contraindication\nMechanical method indication\nMisoprostol contraindication"
-    },
-    "Previous Deliveries" : {
-      "extractionState" : "stale",
+      "comment" : "Dinoprostone contraindication\nMechanical method indication\nMisoprostol contraindication",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Previous Deliveries"
+            "value" : "Previous cesarean section"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partos Previos"
+            "state" : "needs_review",
+            "value" : "Cesárea previa"
           }
         }
       }
     },
     "Previous uterine surgery" : {
-      "comment" : "Misoprostol contraindication"
+      "comment" : "Misoprostol contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous uterine surgery"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cirugía uterina previa"
+          }
+        }
+      }
     },
     "PROM (Premature Rupture of Membranes)" : {
-      "comment" : "Mechanical method contraindication"
+      "comment" : "Mechanical method contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PROM (Premature Rupture of Membranes)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RPM (Ruptura prematura de membranas)"
+          }
+        }
+      }
     },
     "Prostaglandin" : {
-      "comment" : "Prostaglandin method type"
+      "comment" : "Prostaglandin method type",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandin"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandina"
+          }
+        }
+      }
     },
     "Prostaglandin E1 that promotes cervical ripening." : {
-      "comment" : "Misoprostol description"
+      "comment" : "Misoprostol description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandin E1 that promotes cervical ripening."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandina E1 que favorece la dilatación cervical."
+          }
+        }
+      }
     },
     "Prostaglandin E2 that promotes cervical ripening." : {
-      "comment" : "Dinoprostone description"
+      "comment" : "Dinoprostone description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandin E2 that promotes cervical ripening."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandina E2 que favorece la dilatación cervical."
+          }
+        }
+      }
     },
     "Prostaglandins" : {
-      "comment" : "Prostaglandins category filter"
+      "comment" : "Prostaglandins category filter",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandins"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prostaglandinas"
+          }
+        }
+      }
     },
     "Quick Access" : {
       "comment" : "Quick access section title",
@@ -2326,40 +2927,6 @@
         }
       }
     },
-    "Recommendations" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recommendations"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recomendaciones"
-          }
-        }
-      }
-    },
-    "Recommended Methods" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recommended Methods"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Métodos Recomendados"
-          }
-        }
-      }
-    },
     "Reevaluate after cervical ripening" : {
       "comment" : "Recommendation for unfavorable cervix\nUnfavorable recommendation",
       "localizations" : {
@@ -2378,6 +2945,7 @@
       }
     },
     "Reset" : {
+      "comment" : "Confirm reset button",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2394,6 +2962,7 @@
       }
     },
     "Reset settings" : {
+      "comment" : "Reset alert title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2410,6 +2979,7 @@
       }
     },
     "Reset to default values" : {
+      "comment" : "Reset settings button",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2426,7 +2996,21 @@
       }
     },
     "Resident Physician" : {
-      "comment" : "Medical level"
+      "comment" : "Medical level",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resident Physician"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Médico Residente"
+          }
+        }
+      }
     },
     "Result" : {
       "comment" : "Navigation bar title",
@@ -2497,7 +3081,7 @@
       }
     },
     "Score ≤ 5" : {
-      "extractionState" : "stale",
+      "comment" : "Score range",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2514,7 +3098,7 @@
       }
     },
     "Score ≥ 8" : {
-      "extractionState" : "stale",
+      "comment" : "Score range",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2531,7 +3115,7 @@
       }
     },
     "Score 6-7" : {
-      "extractionState" : "stale",
+      "comment" : "Score range",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2548,6 +3132,7 @@
       }
     },
     "Score Modifiers" : {
+      "comment" : "Card title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2564,6 +3149,7 @@
       }
     },
     "Scoring system to assess labor induction" : {
+      "comment" : "Subtitle for information view",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2631,29 +3217,41 @@
       }
     },
     "Section Title" : {
-      "comment" : "Generic section title"
-    },
-    "Select your medical level" : {
-      "comment" : "Medical level placeholder"
-    },
-    "Select your specialty" : {
-      "extractionState" : "stale",
+      "comment" : "Generic section title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Select your specialty"
+            "value" : "Section Title"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Selecciona tu especialidad"
+            "value" : "Section Title"
+          }
+        }
+      }
+    },
+    "Select your medical level" : {
+      "comment" : "Medical level placeholder",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select your medical level"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione su nivel médico"
           }
         }
       }
     },
     "Settings" : {
+      "comment" : "Navigation bar title\nSettings tab title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2687,7 +3285,21 @@
       }
     },
     "Social Service Medical Intern" : {
-      "comment" : "Medical level"
+      "comment" : "Medical level",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Social Service Medical Intern"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Médico Pasante del Servicio Social"
+          }
+        }
+      }
     },
     "Soft" : {
       "comment" : "Consistency value",
@@ -2707,7 +3319,21 @@
       }
     },
     "Specialist" : {
-      "comment" : "Medical level"
+      "comment" : "Medical level",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Specialist"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Médico Especialista"
+          }
+        }
+      }
     },
     "Specialty" : {
       "comment" : "Navigation bar title for specialty selection",
@@ -2722,23 +3348,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Especialidad"
-          }
-        }
-      }
-    },
-    "Specialty not specified" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Specialty not specified"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Especialidad no especificada"
           }
         }
       }
@@ -2795,7 +3404,7 @@
       }
     },
     "Station" : {
-      "extractionState" : "stale",
+      "comment" : "Parameter name",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2829,19 +3438,75 @@
       }
     },
     "Student" : {
-      "comment" : "Medical level"
+      "comment" : "Medical level",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Student"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudiante"
+          }
+        }
+      }
     },
     "Subheading" : {
-      "comment" : "Generic subheading"
+      "comment" : "Generic subheading",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subheading"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subheading"
+          }
+        }
+      }
     },
     "Synthetic hormone that stimulates uterine contractions." : {
-      "comment" : "Oxytocin description"
+      "comment" : "Oxytocin description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synthetic hormone that stimulates uterine contractions."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hormona sintética que estimula las contracciones uterinas"
+          }
+        }
+      }
     },
     "Tachysystole" : {
-      "comment" : "Dinoprostone risk\nMisoprostol risk"
+      "comment" : "Dinoprostone risk\nMisoprostol risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tachysystole"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taquisistolia"
+          }
+        }
+      }
     },
     "Test" : {
-      "extractionState" : "stale",
+      "comment" : "Test tab title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2875,6 +3540,7 @@
       }
     },
     "The Bishop Score Test is a decision-support tool, but it should always be assessed in the complete clinical context and considering the individual characteristics of each patient." : {
+      "comment" : "Clinical note content",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2891,6 +3557,7 @@
       }
     },
     "The Bishop score test is a scoring system that assesses the cervix during labor and helps predict whether labor induction will be needed. It was developed by Dr. Edward Bishop and published in 1964." : {
+      "comment" : "Bishop score description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2975,7 +3642,21 @@
       }
     },
     "Undergraduate Medical Intern" : {
-      "comment" : "Medical level"
+      "comment" : "Medical level",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undergraduate Medical Intern"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Médico Interno de Pregrado"
+          }
+        }
+      }
     },
     "Unfavorable" : {
       "comment" : "Filter for unfavorable evaluations\nUnfavorable interpretation",
@@ -2995,10 +3676,24 @@
       }
     },
     "Unfavorable cervix" : {
-      "comment" : "Dinoprostone indication\nMechanical method indication\nMisoprostol indication"
+      "comment" : "Dinoprostone indication\nMechanical method indication\nMisoprostol indication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unfavorable cervix"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cérvix no favorable"
+          }
+        }
+      }
     },
     "Unfavorable Cervix" : {
-      "extractionState" : "stale",
+      "comment" : "Interpretation category",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -3014,25 +3709,8 @@
         }
       }
     },
-    "Unnamed patient" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unnamed patient"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paciente sin nombre"
-          }
-        }
-      }
-    },
     "Use test modifiers" : {
-      "extractionState" : "stale",
+      "comment" : "Toggle for using test modifiers",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -3049,19 +3727,75 @@
       }
     },
     "Uterine hyperstimulation" : {
-      "comment" : "Dinoprostone risk\nMisoprostol risk\nOxytocin risk"
+      "comment" : "Dinoprostone risk\nMisoprostol risk\nOxytocin risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uterine hyperstimulation"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiperestimulación uterina"
+          }
+        }
+      }
     },
     "Uterine rupture" : {
-      "comment" : "Misoprostol risk"
+      "comment" : "Misoprostol risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uterine rupture"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruptura uterina"
+          }
+        }
+      }
     },
     "Uterine rupture (rare)" : {
-      "comment" : "Dinoprostone risk\nOxytocin risk"
+      "comment" : "Dinoprostone risk\nOxytocin risk",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uterine rupture (rare)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruptura uterina (raro)"
+          }
+        }
+      }
     },
     "Vasa previa" : {
-      "comment" : "Oxytocin contraindication"
+      "comment" : "Oxytocin contraindication",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vasa previa"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vasa previa"
+          }
+        }
+      }
     },
     "Version" : {
-      "extractionState" : "stale",
+      "comment" : "Version label",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -3129,6 +3863,7 @@
       }
     },
     "What is the Bishop Score Test?" : {
+      "comment" : "Card title",
       "localizations" : {
         "en" : {
           "stringUnit" : {

@@ -33,10 +33,10 @@ struct SettingsView: View {
                             
                             // User information
                             VStack(spacing: 4) {
-                                Text(userName.isEmpty ? "Medical Professional" : userName)
+                                Text(userName.isEmpty ? NSLocalizedString("Medical Professional", comment: "Default user title") : userName)
                                     .font(.system(size: 20, weight: .bold, design: .rounded))
                                 
-                                Text(userSpecialty.isEmpty ? "Medical level not specified" : userSpecialty)
+                                Text(userSpecialty.isEmpty ? NSLocalizedString("Medical level not specified", comment: "Default specialty text") : userSpecialty)
                                     .font(.system(size: 16, design: .rounded))
                                     .foregroundColor(.secondary)
                             }
@@ -47,7 +47,7 @@ struct SettingsView: View {
                             }) {
                                 HStack {
                                     Image(systemName: "pencil")
-                                    Text("Edit Information")
+                                    Text(NSLocalizedString("Edit Information", comment: "Edit profile button"))
                                 }
                                 .font(.system(size: 15, weight: .medium, design: .rounded))
                                 .foregroundColor(BishopDesign.Colors.primary)
@@ -67,17 +67,17 @@ struct SettingsView: View {
                         
                         // App preferences
                         VStack(alignment: .leading, spacing: 20) {
-                            Text("App Preferences")
+                            Text(NSLocalizedString("App Preferences", comment: "Settings section title"))
                                 .font(.system(size: 18, weight: .semibold, design: .rounded))
                                 .padding(.horizontal, 20)
                             
                             // Use modifiers
                             preferenceToggleRow(
-                                title: "Use test modifiers",
+                                title: NSLocalizedString("Use test modifiers", comment: "Toggle for using test modifiers"),
                                 icon: "plus.circle.fill",
                                 color: .purple,
                                 isOn: $useModifiers,
-                                description: "Apply score adjustments based on clinical factors"
+                                description: NSLocalizedString("Apply score adjustments based on clinical factors", comment: "Description for test modifiers toggle")
                             )
                             
                             Divider()
@@ -85,11 +85,11 @@ struct SettingsView: View {
                             
                             // Dark mode
                             preferenceToggleRow(
-                                title: "Dark Mode",
+                                title: NSLocalizedString("Dark Mode", comment: "Toggle for dark mode"),
                                 icon: "moon.fill",
                                 color: .indigo,
                                 isOn: $darkMode,
-                                description: "Change the visual appearance of the app"
+                                description: NSLocalizedString("Change the visual appearance of the app", comment: "Description for dark mode toggle")
                             )
                             .onChange(of: darkMode) { newValue in
                                 setAppearance(darkMode: newValue)
@@ -103,16 +103,16 @@ struct SettingsView: View {
                         
                         // About
                         VStack(alignment: .leading, spacing: 20) {
-                            Text("About")
+                            Text(NSLocalizedString("About", comment: "About section title"))
                                 .font(.system(size: 18, weight: .semibold, design: .rounded))
                                 .padding(.horizontal, 20)
                             
                             // Version
                             infoRow(
-                                title: "Version",
+                                title: NSLocalizedString("Version", comment: "Version label"),
                                 icon: "number",
                                 color: .blue,
-                                value: "1.0.0"
+                                value: Constants.appVersion
                             )
                             
                             Divider()
@@ -127,10 +127,10 @@ struct SettingsView: View {
                                     )
                                     
                                     VStack(alignment: .leading, spacing: 4) {
-                                        Text("More information")
+                                        Text(NSLocalizedString("More information", comment: "More info button"))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         
-                                        Text("Bishop Score on Wikipedia")
+                                        Text(NSLocalizedString("Bishop Score on Wikipedia", comment: "Wikipedia link description"))
                                             .font(.system(size: 14, design: .rounded))
                                             .foregroundColor(.secondary)
                                     }
@@ -150,7 +150,7 @@ struct SettingsView: View {
                             
                             // Copyright
                             infoRow(
-                                title: "© 2025 BishopTest App",
+                                title: Constants.appCopyright,
                                 icon: "c.circle.fill",
                                 color: .gray,
                                 value: ""
@@ -168,7 +168,7 @@ struct SettingsView: View {
                         }) {
                             HStack {
                                 Image(systemName: "arrow.counterclockwise")
-                                Text("Reset to default values")
+                                Text(NSLocalizedString("Reset to default values", comment: "Reset settings button"))
                             }
                             .font(.system(size: 16, weight: .medium, design: .rounded))
                             .foregroundColor(.red)
@@ -184,20 +184,20 @@ struct SettingsView: View {
                     .padding(.bottom, 30)
                 }
             }
-            .navigationBarTitle("Settings", displayMode: .large)
+            .navigationBarTitle(NSLocalizedString("Settings", comment: "Navigation bar title"), displayMode: .large)
             .sheet(isPresented: $showingOnboarding) {
                 OnboardingView(showOnboarding: $showingOnboarding)
             }
             .alert(isPresented: $showingResetAlert) {
                 Alert(
-                    title: Text("Reset settings"),
-                    message: Text("Are you sure you want to reset all settings to their default values?"),
-                    primaryButton: .destructive(Text("Reset")) {
+                    title: Text(NSLocalizedString("Reset settings", comment: "Reset alert title")),
+                    message: Text(NSLocalizedString("Are you sure you want to reset all settings to their default values?", comment: "Reset confirmation message")),
+                    primaryButton: .destructive(Text(NSLocalizedString("Reset", comment: "Confirm reset button"))) {
                         withAnimation {
                             resetSettings()
                         }
                     },
-                    secondaryButton: .cancel(Text("Cancel"))
+                    secondaryButton: .cancel(Text(NSLocalizedString("Cancel", comment: "Cancel button")))
                 )
             }
         }
