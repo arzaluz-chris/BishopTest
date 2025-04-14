@@ -173,6 +173,22 @@
         }
       }
     },
+    "+%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld"
+          }
+        }
+      }
+    },
     "+1/+2" : {
       "comment" : "Station value",
       "localizations" : {
@@ -377,6 +393,22 @@
         }
       }
     },
+    "14" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14"
+          }
+        }
+      }
+    },
     "40-50%" : {
       "comment" : "Effacement value",
       "localizations" : {
@@ -390,6 +422,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "40-50%"
+          }
+        }
+      }
+    },
+    "60" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "60"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "60"
           }
         }
       }
@@ -611,6 +659,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preferencias de la aplicación"
+          }
+        }
+      }
+    },
+    "Applied Modifiers" : {
+      "comment" : "Applied modifiers section title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applied Modifiers"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Aplicar modificadores"
           }
         }
       }
@@ -1594,7 +1659,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gran multiparidad (≥6 births)"
+            "value" : "Gran multiparidad (≥6 partos)"
           }
         }
       }
@@ -1940,7 +2005,21 @@
       }
     },
     "Key" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key"
+          }
+        }
+      }
     },
     "Low probability of success in direct induction. Cervical ripening with pharmacological or mechanical methods is recommended." : {
       "comment" : "Unfavorable description",
@@ -2401,6 +2480,23 @@
         }
       }
     },
+    "Nulliparity" : {
+      "comment" : "Nulliparity modifier",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nulliparity"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuliparidad"
+          }
+        }
+      }
+    },
     "Nurse" : {
       "comment" : "Medical level",
       "localizations" : {
@@ -2469,7 +2565,7 @@
       }
     },
     "Parameters" : {
-      "comment" : "Tab title for parameters",
+      "comment" : "Parameters section title\nTab title for parameters",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2639,7 +2735,7 @@
       }
     },
     "Post-term pregnancy" : {
-      "comment" : "Modifier for post-term pregnancy",
+      "comment" : "Modifier for post-term pregnancy\nPost-term pregnancy modifier",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2707,7 +2803,7 @@
       }
     },
     "Preeclampsia" : {
-      "comment" : "Modifier for preeclampsia",
+      "comment" : "Modifier for preeclampsia\nPreeclampsia modifier",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2724,7 +2820,7 @@
       }
     },
     "Premature rupture of membranes" : {
-      "comment" : "Modifier for premature rupture",
+      "comment" : "Modifier for premature rupture\nPremature rupture modifier",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2757,6 +2853,23 @@
         }
       }
     },
+    "Previous births (%d)" : {
+      "comment" : "Previous births modifier with count",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous births (%d)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partos previos (%d)"
+          }
+        }
+      }
+    },
     "Previous cesarean section" : {
       "comment" : "Dinoprostone contraindication\nMechanical method indication\nMisoprostol contraindication",
       "localizations" : {
@@ -2770,6 +2883,17 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Cesárea previa"
+          }
+        }
+      }
+    },
+    "Previous Deliveries" : {
+      "comment" : "Previous deliveries label",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous Deliveries"
           }
         }
       }
@@ -2923,6 +3047,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Evaluaciones Recientes"
+          }
+        }
+      }
+    },
+    "Recommendations" : {
+      "comment" : "Recommendations section title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommendations"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recomendaciones"
+          }
+        }
+      }
+    },
+    "Recommended Methods" : {
+      "comment" : "Recommended methods section title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommended Methods"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Métodos Recomendados"
           }
         }
       }
@@ -3404,7 +3562,7 @@
       }
     },
     "Station" : {
-      "comment" : "Parameter name",
+      "comment" : "Parameter name\nParameter name for station",
       "localizations" : {
         "en" : {
           "stringUnit" : {

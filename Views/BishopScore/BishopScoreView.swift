@@ -27,7 +27,7 @@ struct BishopScoreView: View {
                 .padding(.top, 20)
                 .padding(.bottom, 10)
                 
-                // Patient information section (previously localized)
+                // Patient information section
                 VStack(alignment: .leading, spacing: 20) {
                     // Section title
                     HStack {
@@ -55,8 +55,96 @@ struct BishopScoreView: View {
                         .cornerRadius(12)
                     }
                     
-                    // Age and Previous Deliveries sections (previously localized)
-                    // ... [These sections remain the same as in the previous artifact]
+                    // Age
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(NSLocalizedString("Age", comment: "Age label"))
+                            .font(.system(size: 15, weight: .medium, design: .rounded))
+                            .foregroundColor(.secondary)
+                        
+                        // Modern age slider
+                        HStack {
+                            Text("14")
+                                .font(.system(size: 15, design: .rounded))
+                                .foregroundColor(.secondary)
+                            
+                            Slider(value: Binding(
+                                get: { Double(bishopScore.patientAge ?? 25) },
+                                set: { bishopScore.patientAge = Int($0) }
+                            ), in: 14...60, step: 1)
+                            .accentColor(BishopDesign.Colors.primary)
+                            
+                            Text("60")
+                                .font(.system(size: 15, design: .rounded))
+                                .foregroundColor(.secondary)
+                            
+                            Text("\(bishopScore.patientAge ?? 25)")
+                                .font(.system(size: 17, weight: .semibold, design: .rounded))
+                                .frame(minWidth: 30)
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 6)
+                                .background(BishopDesign.Colors.primary.opacity(0.15))
+                                .cornerRadius(10)
+                        }
+                    }
+                    
+                    // Previous deliveries
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(NSLocalizedString("Previous Deliveries", comment: "Previous deliveries label"))
+                            .font(.system(size: 15, weight: .medium, design: .rounded))
+                            .foregroundColor(.secondary)
+                        
+                        // Custom control for previous deliveries
+                        HStack {
+                            Button(action: {
+                                if bishopScore.previousDeliveries > 0 {
+                                    bishopScore.previousDeliveries -= 1
+                                    bishopScore.nulliparous = bishopScore.previousDeliveries == 0
+                                    withAnimation(.spring()) {
+                                        animateDeliveries = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                            animateDeliveries = false
+                                        }
+                                    }
+                                }
+                            }) {
+                                Image(systemName: "minus.circle.fill")
+                                    .font(.system(size: 24))
+                                    .foregroundColor(bishopScore.previousDeliveries > 0 ? .gray : .gray.opacity(0.3))
+                            }
+                            .disabled(bishopScore.previousDeliveries <= 0)
+                            
+                            Spacer()
+                            
+                            Text("\(bishopScore.previousDeliveries)")
+                                .font(.system(size: 24, weight: .bold, design: .rounded))
+                                .foregroundColor(BishopDesign.Colors.primary)
+                                .frame(width: 50)
+                                .scaleEffect(animateDeliveries ? 1.2 : 1.0)
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                if bishopScore.previousDeliveries < 10 {
+                                    bishopScore.previousDeliveries += 1
+                                    bishopScore.nulliparous = false
+                                    withAnimation(.spring()) {
+                                        animateDeliveries = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                            animateDeliveries = false
+                                        }
+                                    }
+                                }
+                            }) {
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.system(size: 24))
+                                    .foregroundColor(bishopScore.previousDeliveries < 10 ? BishopDesign.Colors.primary : .gray.opacity(0.3))
+                            }
+                            .disabled(bishopScore.previousDeliveries >= 10)
+                        }
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(12)
+                    }
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 20)
