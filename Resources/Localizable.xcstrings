@@ -2895,6 +2895,12 @@
             "state" : "translated",
             "value" : "Previous Deliveries"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partos Previos"
+          }
         }
       }
     },
