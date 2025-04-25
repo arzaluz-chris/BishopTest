@@ -15,10 +15,12 @@ BishopTest is an iOS application designed for obstetric professionals to perform
 
 ## Screenshots
 
-![Home Screen](Screenshots/screenshot01.png)
-![Bishop Score Test](Screenshots/screenshot02.png)
-![Results Screen](Screenshots/screenshot03.png)
-![History View](Screenshots/screenshot05.png)
+<p align="center">
+  <img src="Screenshots/screenshot01.png" width="180" alt="Home Screen">
+  <img src="Screenshots/screenshot02.png" width="180" alt="Bishop Score Test">
+  <img src="Screenshots/screenshot03.png" width="180" alt="Results Screen">
+  <img src="Screenshots/screenshot05.png" width="180" alt="History View">
+</p>
 
 ## Project Structure
 
